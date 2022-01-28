@@ -1,0 +1,186 @@
+@font-face {
+    src: url("/static/Fonts/MomcakeBold-WyonA.otf");
+    font-family: MomcakeBold-WyonA;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body,html{
+  height: 100%;
+  width: 100%;
+}
+.all{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  display: inherit;
+  cursor: pointer;
+}
+#Main{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#Main-Title{
+  font-size: 5cm;
+  position: absolute;
+  left: 35%;
+  font-family: MomcakeBold-WyonA;
+  bottom: 75%;
+}
+#About{
+  background-color: black;
+  shape-outside: polygon(100% 100%, 0 100%, 0 0);
+  clip-path: polygon(100% 100%, 0 100%, 0 0);
+  width: 100%;
+  height: 100%;
+  float: left;
+  word-break: break-word;
+}
+#About-Buy{
+  font-size: 5cm;
+  position: absolute;
+  font-family: MomcakeBold-WyonA;
+  left: 35%;
+  top: 75%;
+  text-decoration: none;
+  cursor: pointer;
+}
+#Connect{
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+}
+#Connect:target{
+  display: flex;
+}
+#Connect-Main{
+  height: 75%;
+  width: 75%;
+  left: 12.5%;
+  top: 12.5%;
+  position: absolute;
+  z-index: 101;
+  background-color: gray;
+  border-radius: 10mm;
+}
+#Connect-Main-Top{
+    height: 33.33%;
+    width: 100%;
+    position: relative;
+}
+#Connect-Main-Freelance{
+    height: 66.66%;
+    width: 100%;
+}
+#Connect-Main-Freelance-Line1{
+  width: 100%;
+  height: 50%;
+}
+#Connect-Main-Freelance-Line1,#Connect-Main-Freelance-Line2{
+  width: 100%;
+  height: 50%;
+}
+.Connect-Main-Freelance-Line1-Div{
+  height: 100%;
+  width: 24%;
+  position: relative;
+  display: inline-block;
+  border-radius: 10mm;
+}
+.Connect-Main-Freelance-Line2-Div{
+  height: 100%;
+  width: 49.7%;
+  position: relative;
+  display: inline-block;
+}
+.Connect-Main-Freelance-Line1-A{
+  height: 75%;
+  width: 75%;
+  position: absolute;
+  left: 12%;
+  top: 12%;
+}
+.Connect-Main-Freelance-Line2-A{
+  height: 75%;
+  width: 37.5%;
+  position: absolute;
+  left: 31.25%;
+  top: 12%;
+}
+#Number{
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+}
+#Number:target{
+  display: flex;
+}
+#Number-Div{
+  height: 20cm;
+  width: 20cm;
+  position: absolute;
+  top: calc(50% - 10cm);
+  left: calc(50% - 10cm);
+  background-color: gray;
+  border-radius: 10mm;
+  z-index: 103;
+  outline: 1mm black solid;
+  opacity: 0;
+}
+#Number-Div-Number{
+  width: 100%;
+  font-size: 3cm;
+  height: 20%;
+  top: 8cm;
+  position: relative;
+  font-family: MomcakeBold-WyonA;
+}
+#Fiverr{
+  background-image: url("/media/img/fiverr.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#Kwork{
+  background-image: url("/media/img/Kwork.png");
+  background-position: center;
+  background-size: 225%;
+  background-repeat: no-repeat;
+}
+#FreelanceJob{
+  background-image: url("/media/img/FreelanceJob.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#FreelanceHabre{
+  background-image: url("/media/img/FreelanceHabre.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#Pchel{
+  background-image: url("/media/img/Pchel.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#Weblancer{
+  background-image: url("/media/img/Weblancer.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#Phone{
+  background-image: url("/media/img/Phone.png");
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

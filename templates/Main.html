@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Averin Timur</title>
+    <link rel="stylesheet" href="{% static 'CSS/Main.css' %}">
+</head>
+<body>
+    <div id="Top">
+        <div id="logo-a">
+            <div id="Logo-a-line1"></div>
+            <div id="Logo-a-line2"></div>
+            <div id="Logo-a-line3"></div>
+        </div>
+        <div id="logo-t">
+            <div id="Logo-t-line1"></div>
+            <div id="Logo-t-line2"></div>
+            <div id="Logo-t-line3"></div>
+        </div>
+        <p id="Top-text-verin">verin</p>
+        <p id="Top-text-imur">imur</p>
+    </div>
+    <div id="Main">
+        <p id="Main-Text-Works">Works</p>
+        <div id="Works">
+            {% for _ , name in WorkList.items %}
+            <div class="Work" id="Work-{{ name }}" onmouseover="AnimationHover('Work-{{ name }}')" onmouseout="AnimationUnHover('Work-{{ name }}')">
+                <p id="Work-Text">{{ name }}</p>
+                <a class="a-all" href="work/{{ name }}"></a>
+            </div>
+            {% endfor %}
+        </div>
+        <p id="Main-Text-Prodjects">Prodjects</p>
+        <div id="Prodjects">
+            <div id="Prodjects-ToLift" >
+                <div class="Prodjects-Change-Text" onclick="Prodjects_ToLift()"><</div>
+            </div>
+            <div id="Prodjects-List">
+                <div id="Prodject1" class="Prodject"></div>
+                <div id="Prodject2" class="Prodject"></div>
+                <div id="Prodject3" class="Prodject"></div>
+            </div>
+            <div id="Prodjects-ToRight">
+                <div class="Prodjects-Change-Text" onclick="Prodjects_ToRight()">></div>
+            </div>
+        </div>
+    </div>
+    <div id="Menu-Open" onmouseover="OpenMenu()">
+        <p id="Menu-Open-Text">menu</p>
+    </div>
+    <div id="Menu">
+        <a class="Menu-Bottom" href="#Number" id="Number-Connect"></a>
+        <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite/compare/master" id="Git-Bottom"></a>
+    </div>
+    <div id="MenuOff" onmouseover="CloseMenu()" class="a-all" style="display: none; z-index: 5;"></div>
+    <div id="Number">
+        <a href="#" class="a-all blur"></a>
+        <div id="Number-Div">
+            <p id="Number-Div-String">WhatsApp/Telegram</p>
+            <p id="Number-Div-Number">8 (995) 675-44-38</p>
+        </div>
+    </div>
+</body>
+<head>
+    <script src="{% static "JS/Main.js" %}"></script>
+</head>
+</html>

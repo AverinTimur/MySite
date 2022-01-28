@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p id="Main-Title">{{ url }}</p>
+    <div id="About">
+        <div id="About-Buy" onclick="ConnectOn()">Buy</div>
+    </div>
+    <div id="Connect">
+        <div class="all" onclick="ConnectOff()"></div>
+        <div id="Connect-Main">
+            <div id="Connect-Main-Top">
+                <div class="Connect-Main-Freelance-Line2-A"  onclick="NumberOn()" id="Phone"></div>
+                <a id="Connect-Main-Top-Website" style="display: none" class="Connect-Main-Freelance-Line2-A"></a>
+            </div>
+            <div id="Connect-Main-Freelance">
+                <div id="Connect-Main-Freelance-Line1">
+                    <div class="Connect-Main-Freelance-Line1-Div"><a class="Connect-Main-Freelance-Line1-A" href="https://www.fiverr.com/averintimur" id="Fiverr"></a></div>
+                    <div class="Connect-Main-Freelance-Line1-Div"><a class="Connect-Main-Freelance-Line1-A" href="https://kwork.ru/user/averintimur" id="Kwork"></a></div>
+                    <div class="Connect-Main-Freelance-Line1-Div"><a class="Connect-Main-Freelance-Line1-A" href="https://www.freelancejob.ru/users/AverinTimur/" id="FreelanceJob"></a></div>
+                    <div class="Connect-Main-Freelance-Line1-Div"><a class="Connect-Main-Freelance-Line1-A" href="https://freelance.habr.com/freelancers/timur-averin" id="FreelanceHabre"></a></div>
+                </div>
+                <div id="Connect-Main-Freelance-Line2">
+                    <div class="Connect-Main-Freelance-Line2-Div"><a class="Connect-Main-Freelance-Line2-A" href="https://pchel.net/u/timur-averin-936/" id="Pchel"></a></div>
+                    <div class="Connect-Main-Freelance-Line2-Div"><a class="Connect-Main-Freelance-Line2-A" href="https://www.weblancer.net/users/AverinTimur/" id="Weblancer"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Number">
+        <a onclick="NumberOff()" class="all" style="z-index: 102"></a>
+        <div id="Number-Div">
+            <p id="Number-Div-Number">8 (995) 675-44-38</p>
+        </div>
+    </div>
+</body>
+<head>
+    <script src="{% static 'JS/Work.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>{{ url }}</title>
+    <link rel="stylesheet" href="{% static 'CSS/Work.css' %}">
+    <style>
+        html,body{
+              background-color: {{ color }};
+        }
+        #About-Buy{
+            color: {{ color }};
+        }
+    </style>
+</head>
+</html>

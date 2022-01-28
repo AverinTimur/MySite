@@ -1,0 +1,410 @@
+@font-face {
+    src: url("/static/Fonts/MomcakeBold-WyonA.otf");
+    font-family: MomcakeBold-WyonA;
+}
+@keyframes Opacity0 {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes Opacity1 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes MenuOpenAnimation {
+    0%{left: -100%;}
+    100%{left: 0;}
+}
+@keyframes MenuCloseAnimation {
+    0%{left: 0%;}
+    100%{left: -100%;}
+}
+@keyframes Prodjects_ToRight2{
+    0%{left: 0;}
+    100%{left: -100%;}
+}
+@keyframes Prodjects_ToRight3{
+    0%{left: 100%;}
+    100%{left: 0;}
+}
+@keyframes Prodjects_ToLeft1{
+    0%{left: -100%;}
+    100%{left: 0;}
+}
+@keyframes Prodjects_ToLeft2{
+    0%{left: 0;}
+    100%{left: 100%;}
+}
+::-webkit-scrollbar{
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    position: absolute;
+}
+body,html{
+    width: 100%;
+    height: 103%;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width: 1119px;
+}
+.a-all{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+.blur{
+    background-color: white;
+    opacity: 0.5;
+    filter: blur();
+}
+#Top{
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    position: absolute;
+    min-width: 1119px;
+}
+#Main{
+    width: 100%;
+    background: white;
+    position: absolute;
+    height: 75%;
+    top: 25%;
+    min-width: 1119px;
+}
+#logo-a{
+    width: 5cm;
+    height: 5cm;
+    top: calc(50% - 2cm);
+    position: absolute;
+    left: calc(50% - 10.5cm);
+    border-radius: 50px;
+}
+#Logo-a-line1{
+    width: 5cm;
+    height: 5cm;
+    position: absolute;
+    shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
+    clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
+    background-color: white;
+    left: 1mm;
+}
+#Logo-a-line2{
+    width: 5cm;
+    height: 5cm;
+    position: absolute;
+    shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
+    clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
+    background-color: white;
+    left: -1mm;
+}
+#Logo-a-line3{
+    width: 5cm;
+    height: 5cm;
+    position: absolute;
+    shape-outside: polygon(2.06cm 2.3cm ,1.94cm 2.7cm,3.07cm 2.7cm,2.94cm 2.3cm);
+    clip-path: polygon(2.06cm 2.3cm ,1.94cm 2.7cm,3.07cm 2.7cm,2.94cm 2.3cm);
+    background-color: white;
+}
+#Top-text-verin{
+    height: 3cm;
+    width: 6.5cm;
+    position: absolute;
+    left: calc(50% - 6.5cm);
+    color: white;
+    font-size: 3cm;
+    top: calc(50% - 1.22cm);
+    font-family: MomcakeBold-WyonA;
+    user-select: none;
+}
+#Top-text-imur{
+    height: 3cm;
+    width: 5cm;
+    position: relative;
+    left: calc(50% + 4cm);
+    color: white;
+    font-size: 3cm;
+    top: calc(50% - 1.22cm);
+    font-family: MomcakeBold-WyonA;
+    user-select: none;
+}
+#logo-t{
+    width: 5cm;
+    height: 5cm;
+    top: calc(50% - 2cm);
+    position: absolute;
+    left: 50%;
+    border-radius: 50px;
+}
+#Logo-t-line1{
+    width: 5cm;
+    height: 5cm;
+    position: absolute;
+    shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
+    clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
+    background-color: white;
+    transform: rotate(-340deg);
+}
+#Logo-t-line2{
+    width: 5cm;
+    height: 5cm;
+    position: absolute;
+    shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
+    clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
+    background-color: white;
+    left: 1.3cm;
+    transform: rotate(340deg);
+}
+#Logo-t-line3{
+    width: 5cm;
+    height: 5cm;
+    position: absolute;
+    shape-outside: polygon(0.12cm 2.3cm ,0 2.7cm,4.07cm 2.7cm,3.94cm 2.3cm);
+    clip-path: polygon(0.12cm 2.3cm ,0 2.7cm,4.07cm 2.7cm,3.94cm 2.3cm);
+    background-color: white;
+    top:-2.7cm;
+    left: 20%;
+}
+#Main-Text-Works{
+    font-family: MomcakeBold-WyonA;
+    width: 7cm;
+    position: relative;
+    font-size: 2.5cm;
+    left: calc(50% - 3.5cm);
+}
+#Top-Text{
+    height: 100%;
+    width: 100%;
+}
+#Works{
+    width: 100%;
+    min-width: 1119px;
+
+}
+.Work,.onWork{
+    height: 2cm;
+    width: 20%;
+    margin-left: 3.7%;
+    display: inline-block;
+    border-radius: 10mm;
+    position: relative;
+    background-color: black;
+    z-index: 1;
+}
+.onWork{
+    color: black;
+    min-width: 4cm;
+}
+.Work{
+    color: white;
+    min-width: 4cm;
+}
+.Work::after{
+    animation-timing-function: ease-in;
+    animation: WorkOut;
+    animation-duration: 0.3s;
+    background-color: white;
+    width: 100%;
+    height: 0;
+    content:"";
+    position: absolute;
+
+}
+.onWork::after{
+    animation-timing-function: ease-out;
+    animation: WorkOn;
+    animation-duration: 0.3s;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    content:"";
+    position: absolute;
+
+}
+@keyframes WorkOn {
+    0%{
+        height: 0;
+        display: none;
+    }
+    100%{
+        height: 100%;
+        display: inline-block;
+    }
+}
+@keyframes WorkOut {
+    0%{
+        height: 100%;
+        top: 0;
+    }
+    100%{
+        height: 0;
+        top: 100%;
+    }
+}
+#Work-Text{
+    line-height: 0;
+    position: absolute;
+    text-align: center;
+    font-size: 10mm;
+    height: 100%;
+    width: 100%;
+    top: calc(50%);
+    font-family: 'MomcakeBold-WyonA';
+    z-index: 3;
+    user-select: none;
+}
+#Main-Text-Prodjects{
+    font-family: MomcakeBold-WyonA;
+    width: 10.5cm;
+    position: relative;
+    font-size: 2.5cm;
+    left: calc(50% - 5.25cm);
+}
+#Prodjects{
+    height: calc(100% - 7.65cm);
+    position: relative;
+    min-width: 1119px;
+}
+#Prodjects-ToLift,#Prodjects-ToRight{
+    height: 100%;
+    width: 1.7cm;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+}
+#Prodjects-ToLift{
+    left: 0;
+}
+#Prodjects-ToRight{
+    right: 0;
+}
+.Prodjects-Change-Text{
+    line-height: 0;
+    font-size: 40mm;
+    font-family: 'MomcakeBold-WyonA';
+    opacity: 0.3;
+    top: calc(50% - 7.5mm);
+    position: absolute;
+    height: 1.5cm;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
+#Prodjects-List{
+    height: 100%;
+    width: 88.4%;
+    overflow: hidden;
+    left: 5.8%;
+    position: absolute;
+    border-radius: 10mm;
+}
+.Prodject{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    display: inline-block;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: black;
+    background-position: center;
+}
+#Prodject1{
+    right: 100%;
+}
+#Prodject3{
+    left: 100%;
+}
+#Menu-Open{
+    height: 30%;
+    width: 7mm;
+    top: 35%;
+    position: absolute;
+    z-index: 7;
+}
+#Menu-Open-Text{
+    transform: rotate(90deg);
+    font-size: 7mm;
+    position: relative;
+    top: calc(50% - 2.2cm);
+    font-family: MomcakeBold-WyonA;
+    user-select: none;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+#Menu{
+    position: fixed;
+    height: 100%;
+    width: 6cm;
+    border-bottom-right-radius: 10mm;
+    border-top-right-radius: 10mm;
+    z-index: 6;
+    display: none;
+    background-color: white;
+    opacity: 0.95;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+}
+.Menu-Bottom{
+    height: 4cm;
+    width: 4cm;
+    background: black;
+    position: relative;
+    border-radius: 10mm;
+    margin: 1cm;
+    display: block;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#Number{
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: absolute;
+}
+#Number:target{
+    display: flex;
+}
+#Number-Div{
+    height: 20cm;
+    width: 20cm;
+    position: absolute;
+    top: calc(50% - 10cm);
+    left: calc(50% - 10cm);
+    background-color: white;
+    border-radius: 10mm;
+    z-index: 11;
+    border: 1mm;
+    border-style: groove;
+    border-color: black;
+}
+#Number-Div-Number{
+    width: 100%;
+    font-size: 3cm;
+    height: 20%;
+    top: 8cm;
+    position: relative;
+    font-family: MomcakeBold-WyonA;
+}
+#Number-Connect{
+    background-image: url("/media/img/PhoneLogo.png");
+}
+#Number-Div-String{
+    font-size: 2cm;
+    font-family: 'MomcakeBold-WyonA';
+    left: 1.75cm;
+    top: 2cm;
+}
+#Git-Bottom{
+    background-image: url("/media/img/git.png");
+}
