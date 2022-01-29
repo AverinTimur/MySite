@@ -1,34 +1,69 @@
+/*
+Prefixed by https://autoprefixer.github.io
+*/
 @font-face {
     src: url("/static/Fonts/MomcakeBold-WyonA.otf");
     font-family: MomcakeBold-WyonA;
+}
+@-webkit-keyframes Opacity0 {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
 }
 @keyframes Opacity0 {
     0%{opacity: 1;}
     100%{opacity: 0;}
 }
+@-webkit-keyframes Opacity1 {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
 @keyframes Opacity1 {
     0%{opacity: 0;}
     100%{opacity: 1;}
+}
+@-webkit-keyframes MenuOpenAnimation {
+    0%{left: -100%;}
+    100%{left: 0;}
 }
 @keyframes MenuOpenAnimation {
     0%{left: -100%;}
     100%{left: 0;}
 }
+@-webkit-keyframes MenuCloseAnimation {
+    0%{left: 0%;}
+    100%{left: -100%;}
+}
 @keyframes MenuCloseAnimation {
     0%{left: 0%;}
+    100%{left: -100%;}
+}
+@-webkit-keyframes Prodjects_ToRight2{
+    0%{left: 0;}
     100%{left: -100%;}
 }
 @keyframes Prodjects_ToRight2{
     0%{left: 0;}
     100%{left: -100%;}
 }
+@-webkit-keyframes Prodjects_ToRight3{
+    0%{left: 100%;}
+    100%{left: 0;}
+}
 @keyframes Prodjects_ToRight3{
     0%{left: 100%;}
+    100%{left: 0;}
+}
+@-webkit-keyframes Prodjects_ToLeft1{
+    0%{left: -100%;}
     100%{left: 0;}
 }
 @keyframes Prodjects_ToLeft1{
     0%{left: -100%;}
     100%{left: 0;}
+}
+@-webkit-keyframes Prodjects_ToLeft2{
+    0%{left: 0;}
+    100%{left: 100%;}
 }
 @keyframes Prodjects_ToLeft2{
     0%{left: 0;}
@@ -61,7 +96,8 @@ body,html{
 .blur{
     background-color: white;
     opacity: 0.5;
-    filter: blur();
+    -webkit-filter: blur();
+            filter: blur();
 }
 #Top{
     width: 100%;
@@ -91,7 +127,8 @@ body,html{
     height: 5cm;
     position: absolute;
     shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
-    clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
+    -webkit-clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
+            clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
     background-color: white;
     left: 1mm;
 }
@@ -100,7 +137,8 @@ body,html{
     height: 5cm;
     position: absolute;
     shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
-    clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
+    -webkit-clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
+            clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
     background-color: white;
     left: -1mm;
 }
@@ -109,7 +147,8 @@ body,html{
     height: 5cm;
     position: absolute;
     shape-outside: polygon(2.06cm 2.3cm ,1.94cm 2.7cm,3.07cm 2.7cm,2.94cm 2.3cm);
-    clip-path: polygon(2.06cm 2.3cm ,1.94cm 2.7cm,3.07cm 2.7cm,2.94cm 2.3cm);
+    -webkit-clip-path: polygon(2.06cm 2.3cm ,1.94cm 2.7cm,3.07cm 2.7cm,2.94cm 2.3cm);
+            clip-path: polygon(2.06cm 2.3cm ,1.94cm 2.7cm,3.07cm 2.7cm,2.94cm 2.3cm);
     background-color: white;
 }
 #Top-text-verin{
@@ -121,7 +160,10 @@ body,html{
     font-size: 3cm;
     top: calc(50% - 1.22cm);
     font-family: MomcakeBold-WyonA;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 #Top-text-imur{
     height: 3cm;
@@ -132,7 +174,10 @@ body,html{
     font-size: 3cm;
     top: calc(50% - 1.22cm);
     font-family: MomcakeBold-WyonA;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 #logo-t{
     width: 5cm;
@@ -147,26 +192,33 @@ body,html{
     height: 5cm;
     position: absolute;
     shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
-    clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
+    -webkit-clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
+            clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
     background-color: white;
-    transform: rotate(-340deg);
+    -webkit-transform: rotate(-340deg);
+        -ms-transform: rotate(-340deg);
+            transform: rotate(-340deg);
 }
 #Logo-t-line2{
     width: 5cm;
     height: 5cm;
     position: absolute;
     shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
-    clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
+    -webkit-clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
+            clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
     background-color: white;
     left: 1.3cm;
-    transform: rotate(340deg);
+    -webkit-transform: rotate(340deg);
+        -ms-transform: rotate(340deg);
+            transform: rotate(340deg);
 }
 #Logo-t-line3{
     width: 5cm;
     height: 5cm;
     position: absolute;
     shape-outside: polygon(0.12cm 2.3cm ,0 2.7cm,4.07cm 2.7cm,3.94cm 2.3cm);
-    clip-path: polygon(0.12cm 2.3cm ,0 2.7cm,4.07cm 2.7cm,3.94cm 2.3cm);
+    -webkit-clip-path: polygon(0.12cm 2.3cm ,0 2.7cm,4.07cm 2.7cm,3.94cm 2.3cm);
+            clip-path: polygon(0.12cm 2.3cm ,0 2.7cm,4.07cm 2.7cm,3.94cm 2.3cm);
     background-color: white;
     top:-2.7cm;
     left: 20%;
@@ -206,9 +258,12 @@ body,html{
     min-width: 4cm;
 }
 .Work::after{
-    animation-timing-function: ease-in;
-    animation: WorkOut;
-    animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation: WorkOut;
+            animation: WorkOut;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
     background-color: white;
     width: 100%;
     height: 0;
@@ -217,15 +272,28 @@ body,html{
 
 }
 .onWork::after{
-    animation-timing-function: ease-out;
-    animation: WorkOn;
-    animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation: WorkOn;
+            animation: WorkOn;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
     background-color: white;
     width: 100%;
     height: 100%;
     content:"";
     position: absolute;
 
+}
+@-webkit-keyframes WorkOn {
+    0%{
+        height: 0;
+        display: none;
+    }
+    100%{
+        height: 100%;
+        display: inline-block;
+    }
 }
 @keyframes WorkOn {
     0%{
@@ -235,6 +303,16 @@ body,html{
     100%{
         height: 100%;
         display: inline-block;
+    }
+}
+@-webkit-keyframes WorkOut {
+    0%{
+        height: 100%;
+        top: 0;
+    }
+    100%{
+        height: 0;
+        top: 100%;
     }
 }
 @keyframes WorkOut {
@@ -257,7 +335,10 @@ body,html{
     top: calc(50%);
     font-family: 'MomcakeBold-WyonA';
     z-index: 3;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 #Main-Text-Prodjects{
     font-family: MomcakeBold-WyonA;
@@ -294,7 +375,10 @@ body,html{
     height: 1.5cm;
     width: 100%;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 #Prodjects-List{
     height: 100%;
@@ -310,8 +394,10 @@ body,html{
     position: absolute;
     overflow-x: hidden;
     display: inline-block;
-    animation-duration: 0.4s;
-    animation-timing-function: linear;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: black;
@@ -331,15 +417,23 @@ body,html{
     z-index: 7;
 }
 #Menu-Open-Text{
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
     font-size: 7mm;
     position: relative;
     top: calc(50% - 2.2cm);
     font-family: MomcakeBold-WyonA;
-    user-select: none;
-    animation-duration: 0.5s;
-    animation-delay: 0s;
-    animation-timing-function: linear;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 #Menu{
     position: fixed;
@@ -351,8 +445,10 @@ body,html{
     display: none;
     background-color: white;
     opacity: 0.95;
-    animation-duration: 0.4s;
-    animation-timing-function: linear;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 .Menu-Bottom{
     height: 4cm;
@@ -373,6 +469,8 @@ body,html{
     position: absolute;
 }
 #Number:target{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 #Number-Div{
@@ -407,4 +505,20 @@ body,html{
 }
 #Git-Bottom{
     background-image: url("/media/img/git.png");
+}
+@media (max-device-width: 9cm){
+    .Work,.onWork{
+        width: 90%;
+        height: 4cm;
+        margin-left: 5%;
+    }
+    #Work-Text{
+    font-size: 3cm;
+}
+    #Menu-Open{
+        width: 1cm;
+    }
+    #Menu-Open-Text {
+        font-size: 1cm;
+    }
 }
