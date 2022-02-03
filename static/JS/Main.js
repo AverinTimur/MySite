@@ -108,5 +108,5 @@ ajax.onreadystatechange = function(){
     document.getElementById("Prodject1").style.backgroundImage = "url('" + ProdjectList[Prodject_1_Num] + "')";
     document.getElementById("Prodject2").style.backgroundImage = "url('" + ProdjectList[Prodject_2_Num] + "')";
     document.getElementById("Prodject3").style.backgroundImage = "url('" + ProdjectList[Prodject_3_Num] + "')";
-    var interval = setInterval(function (){Prodjects_ToRight()},10000);
+    setInterval(function (){Prodjects_ToRight()},10000);
 }
