@@ -51,7 +51,6 @@ function Prodjects_ToRight(){
             document.getElementById("Prodject2").style.animationName = "";
             document.getElementById("Prodject3").style.animationName = "";
         }, 390)
-
     }
 }
 function Prodjects_ToLift(){
@@ -109,4 +108,5 @@ ajax.onreadystatechange = function(){
     document.getElementById("Prodject1").style.backgroundImage = "url('" + ProdjectList[Prodject_1_Num] + "')";
     document.getElementById("Prodject2").style.backgroundImage = "url('" + ProdjectList[Prodject_2_Num] + "')";
     document.getElementById("Prodject3").style.backgroundImage = "url('" + ProdjectList[Prodject_3_Num] + "')";
+    var interval = setInterval(function (){Prodjects_ToRight()},10000);
 }
