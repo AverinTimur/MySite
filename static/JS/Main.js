@@ -47,6 +47,7 @@ function Prodjects_ToRight(){
         setTimeout(function () {
             document.getElementById("Prodject1").style.backgroundImage = "url('" + ProdjectList[Prodject_1_Num] + "')";
             document.getElementById("Prodject2").style.backgroundImage = "url('" + ProdjectList[Prodject_2_Num] + "')";
+            document.getElementById("Prodject2").href = ProdjectList[Prodject_2_Num];
             document.getElementById("Prodject3").style.backgroundImage = "url('" + ProdjectList[Prodject_3_Num] + "')";
             document.getElementById("Prodject2").style.animationName = "";
             document.getElementById("Prodject3").style.animationName = "";
@@ -75,6 +76,7 @@ function Prodjects_ToLift(){
         setTimeout(function () {
             document.getElementById("Prodject1").style.backgroundImage = "url('" + ProdjectList[Prodject_1_Num] + "')";
             document.getElementById("Prodject2").style.backgroundImage = "url('" + ProdjectList[Prodject_2_Num] + "')";
+            document.getElementById("Prodject2").href = ProdjectList[Prodject_2_Num];
             document.getElementById("Prodject3").style.backgroundImage = "url('" + ProdjectList[Prodject_3_Num] + "')";
             document.getElementById("Prodject1").style.animationName = "";
             document.getElementById("Prodject2").style.animationName = "";
@@ -107,6 +109,7 @@ ajax.onreadystatechange = function(){
     }
     document.getElementById("Prodject1").style.backgroundImage = "url('" + ProdjectList[Prodject_1_Num] + "')";
     document.getElementById("Prodject2").style.backgroundImage = "url('" + ProdjectList[Prodject_2_Num] + "')";
+    document.getElementById("Prodject2").href = ProdjectList[Prodject_2_Num];
     document.getElementById("Prodject3").style.backgroundImage = "url('" + ProdjectList[Prodject_3_Num] + "')";
     setInterval(function (){Prodjects_ToRight()},10000);
 }
