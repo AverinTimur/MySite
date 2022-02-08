@@ -91,9 +91,9 @@ function Prodjects_ToLift(){
 var i
 var ProdjectList = {};
 var ajax = new XMLHttpRequest();
-a = "http://" + document.domain + ":8000/firstAJAX/";
-ajax.open("POST",a);
+ajax.open("POST","http://" + document.domain + ":8000/firstAJAX/");
 ajax.responseType = 'json';
+ajax.setRequestHeader("X-CSRFToken",document.querySelector('[name=csrfmiddlewaretoken]').value)
 ajax.send();
 ajax.onreadystatechange = function(){
     for (i in ajax.response){

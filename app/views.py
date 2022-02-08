@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from app import models
 from .models import *
-from django.http import FileResponse
+import json
 
 def run(request):
     WorkList = {}
@@ -26,7 +26,7 @@ def firstAJAX(request):
     for i in Prodjects.objects.all():
         ProdjectList[i.id] = i.img.url
 
-    return JsonResponse(ProdjectList)
+    return HttpResponse(json.dumps(ProdjectList), content_type="application/json")
 
 
 
