@@ -1,32 +1,30 @@
 //functions
 function OpenMenu(){
-    document.getElementById("Menu").style.display = "inline";
-    document.getElementById("Menu").style.animationName = "MenuOpenAnimation";
-    document.getElementById("MenuOff").style.display = "inline";
-    document.getElementById("Menu-Open-Text").style.animationName = "Opacity0";
+    $("#Menu").css("display","inline");
+    $("#Menu").css("animation-name","MenuOpenAnimation");
+    $("#MenuOff").css("display","inline")
+    $("#Menu-Open-Text").css("animation-name","Opacity0");
     setTimeout(function (){
-
-        document.getElementById("Menu-Open-Text").style.display = "none";
+        $("#Menu-Open-Text").css("display","none");
     },500)
 }
 function CloseMenu(){
-
-    document.getElementById("MenuOff").style.display = "none";
-    document.getElementById("Menu").style.animationName = "MenuCloseAnimation";
-    document.getElementById("Menu-Open-Text").style.animationName = "Opacity1";
+    $("#MenuOff").css("display","none");
+    $("#Menu").css("animation-name","MenuCloseAnimation");
+    $("#Menu-Open-Text").css("animation-name","Opacity1");
     setTimeout(function (){
-        document.getElementById("Menu-Open-Text").style.display = "block";
-        document.getElementById("Menu").style.display = "none";
+        $("#Menu-Open-Text").css("display","block");
+        $("#Menu").css("display","none");
     },400)
 }
 function AnimationHover(id){
-    document.getElementById(id).className = "onWork";
+    $("#" + id).attr("class","onWork");
 }
 function AnimationUnHover(id){
-    document.getElementById(id).className = "Work";
+    $("#" + id).attr("class","Work");
 }
 function Prodjects_ToRight(){
-    if (document.getElementById("Prodject2").style.animationName != "Prodjects_ToRight2") {
+    if ($("#Prodject2").css("animationName") != "Prodjects_ToRight2") {
         if (Prodject_1_Num == i) {
             Prodject_1_Num = 0;
         } else {
@@ -42,21 +40,21 @@ function Prodjects_ToRight(){
         } else {
             Prodject_3_Num++;
         }
-        document.getElementById("Prodject2").style.animationName = "Prodjects_ToRight2";
-        document.getElementById("Prodject3").style.animationName = "Prodjects_ToRight3";
+        $("#Prodject2").css("animation-name","Prodjects_ToRight2");
+        $("#Prodject3").css("animation-name","Prodjects_ToRight3");
         setTimeout(function () {
-            document.getElementById("Prodject1").style.backgroundImage = "url('" + ProdjectList[Prodject_1_Num] + "')";
-            document.getElementById("Prodject2").style.backgroundImage = "url('" + ProdjectList[Prodject_2_Num] + "')";
-            document.getElementById("Prodject2").href = ProdjectList[Prodject_2_Num];
-            document.getElementById("Prodject3").style.backgroundImage = "url('" + ProdjectList[Prodject_3_Num] + "')";
-            document.getElementById("Prodject2").style.animationName = "";
-            document.getElementById("Prodject3").style.animationName = "";
+            $("#Prodject1").css("background-image","url('" + ProdjectList[Prodject_1_Num] + "')");
+            $("#Prodject2").css("background-image","url('" + ProdjectList[Prodject_2_Num] + "')");
+            $("#Prodject2").attr("href",ProdjectList[Prodject_2_Num]);
+            $("#Prodject3").css("background-image","url('" + ProdjectList[Prodject_3_Num] + "')");
+            $("#Prodject2").css("animation-name","");
+            $("#Prodject3").css("animation-name","");
         }, 390)
     }
 }
 function Prodjects_ToLift(){
-    if (document.getElementById("Prodject2").style.animationName != "Prodjects_ToLeft2") {
-        if (Prodject_1_Num == 0) {
+    if ($("#Prodject2").css("animationName") != "Prodjects_ToLeft2") {
+        if (Prodject_1_Num == 0){
             Prodject_1_Num = i;
         } else {
             Prodject_1_Num--;
@@ -71,45 +69,42 @@ function Prodjects_ToLift(){
         } else {
             Prodject_3_Num--;
         }
-        document.getElementById("Prodject1").style.animationName = "Prodjects_ToLeft1";
-        document.getElementById("Prodject2").style.animationName = "Prodjects_ToLeft2";
+        $("#Prodject1").css("animation-name","Prodjects_ToLeft1");
+        $("#Prodject2").css("animation-name","Prodjects_ToLeft2");
         setTimeout(function () {
-            document.getElementById("Prodject1").style.backgroundImage = "url('" + ProdjectList[Prodject_1_Num] + "')";
-            document.getElementById("Prodject2").style.backgroundImage = "url('" + ProdjectList[Prodject_2_Num] + "')";
-            document.getElementById("Prodject2").href = ProdjectList[Prodject_2_Num];
-            document.getElementById("Prodject3").style.backgroundImage = "url('" + ProdjectList[Prodject_3_Num] + "')";
-            document.getElementById("Prodject1").style.animationName = "";
-            document.getElementById("Prodject2").style.animationName = "";
+            $("#Prodject1").css("background-image","url('" + ProdjectList[Prodject_1_Num] + "')");
+            $("#Prodject2").css("background-image","url('" + ProdjectList[Prodject_2_Num] + "')");
+            $("#Prodject2").attr("href",ProdjectList[Prodject_2_Num]);
+            $("#Prodject3").css("background-image","url('" + ProdjectList[Prodject_3_Num] + "')");
+            $("#Prodject1").css("animation-name","");
+            $("#Prodject2").css("animation-name","");
         }, 390)
     }
 }
 
 
-
-
-//FirstAjax
-var i
-var ProdjectList = {};
-var ajax = new XMLHttpRequest();
-ajax.open("POST","http://" + document.domain + ":8000/firstAJAX/");
-ajax.responseType = 'json';
-ajax.setRequestHeader("X-CSRFToken",document.querySelector('[name=csrfmiddlewaretoken]').value)
-ajax.send();
-ajax.onreadystatechange = function(){
-    for (i in ajax.response){
-        ProdjectList[i] = ajax.response[i];
-    }
-    Prodject_1_Num = i;
-    Prodject_2_Num = 0;
-    if(i>0){
-        Prodject_3_Num = 1;
-    }
-    else{
-        Prodject_3_Num = 0;
-    }
-    document.getElementById("Prodject1").style.backgroundImage = "url('" + ProdjectList[Prodject_1_Num] + "')";
-    document.getElementById("Prodject2").style.backgroundImage = "url('" + ProdjectList[Prodject_2_Num] + "')";
-    document.getElementById("Prodject2").href = ProdjectList[Prodject_2_Num];
-    document.getElementById("Prodject3").style.backgroundImage = "url('" + ProdjectList[Prodject_3_Num] + "')";
-    setInterval(function (){Prodjects_ToRight()},10000);
-}
+ProdjectList = {};
+$.ajax({
+    method : "Post",
+    url: "http://" + $(document).attr("domain") + ":8000/firstAJAX/",
+    contentType: "json",
+    headers: {"X-CSRFToken": $('[name=csrfmiddlewaretoken]').attr("value")},
+    success: function(data){
+        for (i in data){
+            ProdjectList[i] = data[i];
+        }
+        Prodject_1_Num = i;
+        Prodject_2_Num = 0;
+        if(i>0){
+            Prodject_3_Num = 1;
+        }
+        else{
+            Prodject_3_Num = 0;
+        }
+        $("#Prodject1").css("background-image","url('" + ProdjectList[Prodject_1_Num] + "')");
+        $("#Prodject2").css("background-image","url('" + ProdjectList[Prodject_2_Num] + "')");
+        $("#Prodject2").attr("href",ProdjectList[Prodject_2_Num]);
+        $("#Prodject3").css("background-image","url('" + ProdjectList[Prodject_3_Num] + "')");
+        setInterval(function (){Prodjects_ToRight()},10000);
+    },
+});
