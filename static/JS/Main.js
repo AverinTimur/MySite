@@ -1,17 +1,18 @@
 //functions
 function OpenMenu(){
+
     $("#Menu").css("display","inline");
-    $("#Menu").css("animation-name","MenuOpenAnimation");
+    $("#Menu").animate({left: 0},300,"linear");
     $("#MenuOff").css("display","inline")
-    $("#Menu-Open-Text").css("animation-name","Opacity0");
+    $("#Menu-Open-Text").animate({opacity: 0},500,"linear");
     setTimeout(function (){
         $("#Menu-Open-Text").css("display","none");
     },500)
 }
 function CloseMenu(){
     $("#MenuOff").css("display","none");
-    $("#Menu").css("animation-name","MenuCloseAnimation");
-    $("#Menu-Open-Text").css("animation-name","Opacity1");
+    $("#Menu").animate({left: "-6cm"},300,"linear");
+    $("#Menu-Open-Text").animate({opacity: 1},500,"linear");
     setTimeout(function (){
         $("#Menu-Open-Text").css("display","block");
         $("#Menu").css("display","none");

@@ -5,38 +5,6 @@ Prefixed by https://autoprefixer.github.io
     src: url("/static/Fonts/MomcakeBold-WyonA.otf");
     font-family: MomcakeBold-WyonA;
 }
-@-webkit-keyframes Opacity0 {
-    0%{opacity: 1;}
-    100%{opacity: 0;}
-}
-@keyframes Opacity0 {
-    0%{opacity: 1;}
-    100%{opacity: 0;}
-}
-@-webkit-keyframes Opacity1 {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-@keyframes Opacity1 {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-@-webkit-keyframes MenuOpenAnimation {
-    0%{left: -100%;}
-    100%{left: 0;}
-}
-@keyframes MenuOpenAnimation {
-    0%{left: -100%;}
-    100%{left: 0;}
-}
-@-webkit-keyframes MenuCloseAnimation {
-    0%{left: 0%;}
-    100%{left: -100%;}
-}
-@keyframes MenuCloseAnimation {
-    0%{left: 0%;}
-    100%{left: -100%;}
-}
 @-webkit-keyframes Prodjects_ToRight2{
     0%{left: 0;}
     100%{left: -100%;}
@@ -428,12 +396,6 @@ body,html{
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
 }
 #Menu{
     position: fixed;
@@ -445,10 +407,6 @@ body,html{
     display: none;
     background-color: white;
     opacity: 0.95;
-    -webkit-animation-duration: 0.4s;
-            animation-duration: 0.4s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
 }
 .Menu-Bottom{
     height: 4cm;
