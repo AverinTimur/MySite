@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=xn%cgtg+q7u0#w1*!95hcj84yustpq@zjob5ahp!*4nld$9^b'
 
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -94,7 +94,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 
 MEDIA_URL =  "/media/"
