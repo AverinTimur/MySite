@@ -35,7 +35,7 @@
             {% for _ , name in WorkList.items %}
             <div class="Work" id="Work-{{ name }}" onmouseover="AnimationHover('Work-{{ name }}')" onmouseout="AnimationUnHover('Work-{{ name }}')">
                 <p id="Work-Text">{{ name }}</p>
-                <a class="a-all" href="work/{{ name }}"></a>
+                <a class="a-all" href="work/{{ name }}" title="{{ name }}"></a>
             </div>
             {% endfor %}
         </div>
@@ -46,7 +46,7 @@
             </div>
             <div id="Prodjects-List">
                 <div id="Prodject1" class="Prodject"></div>
-                <a href="" id="Prodject2" class="Prodject"></a>
+                <a href="" id="Prodject2" class="Prodject" title="Example of my work"></a>
                 <div id="Prodject3" class="Prodject"></div>
             </div>
             <div id="Prodjects-ToRight">
@@ -58,8 +58,8 @@
         <p id="Menu-Open-Text">menu</p>
     </div>
     <div id="Menu">
-        <a class="Menu-Bottom" href="#Number" id="Number-Connect"></a>
-        <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite.git" id="Git-Bottom"></a>
+        <a class="Menu-Bottom" href="#Number" id="Number-Connect" title="My Number"></a>
+        <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite.git" id="Git-Bottom" title="Git on Github"></a>
     </div>
     <div id="MenuOff" onmouseover="CloseMenu()" class="a-all" style="display: none; z-index: 5;"></div>
     <div id="Number">

@@ -2,7 +2,7 @@
 Prefixed by https://autoprefixer.github.io
 */
 @font-face {
-    src: url("/static/Fonts/MomcakeBold-WyonA.otf");
+    src: url("/static/font/MomcakeBold-WyonA.otf");
     font-family: MomcakeBold-WyonA;
 }
 @-webkit-keyframes Prodjects_ToRight2{
