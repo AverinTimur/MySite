@@ -8,8 +8,9 @@ urlpatterns = [
     path("",views.run,name="run"),
     path("firstAJAX/",views.firstAJAX,name="firstAJAX"),
     path("work/<url>/",views.work),
-    path("admin/",admin.site.urls)
+    path("admin/",admin.site.urls),
 ]
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
