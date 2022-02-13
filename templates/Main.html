@@ -30,7 +30,7 @@
         <p id="Top-text-imur">imur</p>
     </div>
     <div id="Main">
-        <p id="Main-Text-Works">Works</p>
+        <p id="Main-Text-Works">Skills</p>
         <div id="Works">
             {% for _ , name in WorkList.items %}
             <div class="Work" id="Work-{{ name }}" onmouseover="AnimationHover('Work-{{ name }}')" onmouseout="AnimationUnHover('Work-{{ name }}')">
@@ -39,7 +39,7 @@
             </div>
             {% endfor %}
         </div>
-        <p id="Main-Text-Prodjects">Prodjects</p>
+        <p id="Main-Text-Prodjects">Works</p>
         <div id="Prodjects">
             <div id="Prodjects-ToLift" >
                 <div class="Prodjects-Change-Text" onclick="Prodjects_ToLift()"><</div>
@@ -60,6 +60,7 @@
     <div id="Menu">
         <a class="Menu-Bottom" href="#Number" id="Number-Connect" title="My Number"></a>
         <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite.git" id="Git-Bottom" title="Git on Github"></a>
+        <bottom class="Menu-Bottom" id="LanguageBottom" onclick="LanguageChange()"></bottom>
     </div>
     <div id="MenuOff" onmouseover="CloseMenu()" class="a-all" style="display: none; z-index: 5;"></div>
     <div id="Number">

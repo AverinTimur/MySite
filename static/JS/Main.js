@@ -1,6 +1,17 @@
 //functions
-function OpenMenu(){
+function LanguageChange(){
+    if ($("#LanguageBottom").css("background-image") == 'url("' +$(document).attr("URL") + 'media/img/RussianFlag.png")'){
+        $("#LanguageBottom").css("background-image","url('media/img/UKFlag.png')");
+        $("#Main-Text-Prodjects").text("Работы");
+        $("#Main-Text-Works").text("Умения");
+    }else if ($("#LanguageBottom").css("background-image") == 'url("' +$(document).attr("URL") + 'media/img/UKFlag.png")'){
+        $("#LanguageBottom").css("background-image","url('media/img/RussianFlag.png");
+        $("#Main-Text-Prodjects").text("Skills");
+        $("#Main-Text-Works").text("Works");
+    }
 
+}
+function OpenMenu(){
     $("#Menu").css("display","inline");
     $("#Menu").animate({left: 0},300,"linear");
     $("#MenuOff").css("display","inline")
@@ -87,7 +98,7 @@ function Prodjects_ToLift(){
 ProdjectList = {};
 $.ajax({
     method : "Post",
-    url: "http://" + $(document).attr("domain") + ":8000/firstAJAX/",
+    url: $(document).attr("URL") + "firstAJAX/",
     contentType: "json",
     headers: {"X-CSRFToken": $('[name=csrfmiddlewaretoken]').attr("value")},
     success: function(data){
