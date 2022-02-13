@@ -6,4 +6,4 @@ class Works(models.Model):
 
 class Prodjects(models.Model):
     name = models.TextField(blank=False)
-    img = models.ImageField(blank=False,upload_to="app/media/img")
+    img = models.ImageField(blank=False,upload_to="app/img")
