@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="{% static 'JS/Work.js' %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="author" content="Averin Timur">
     <meta name="description" content="It's my site.It work with Django(Python framework), HTML/CSS, JavaScript/jQuery.">
@@ -27,7 +25,7 @@
 <body>
     <h1 id="Main-Title">{{ url }}</h1>
     <div id="About">
-        <div id="About-Buy" onclick="ConnectOn()" title="When you can buymy work">Buy</div>
+        <div id="About-Buy" onclick="ConnectOn()" title="When you can buy my work">Buy</div>
     </div>
     <div id="Connect">
         <div class="all" onclick="ConnectOff()"></div>
@@ -56,5 +54,7 @@
             <p id="Number-Div-Number">8 (995) 675-44-38</p>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'JS/Work.js' %}"></script>
 </body>
 </html>

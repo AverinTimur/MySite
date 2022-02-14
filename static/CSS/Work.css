@@ -30,7 +30,7 @@ body,html{
 #Main-Title{
   font-size: 5cm;
   position: absolute;
-  left: 35%;
+  right: 5%;
   font-family: MomcakeBold-WyonA;
   bottom: 75%;
 }
@@ -48,7 +48,7 @@ body,html{
   font-size: 5cm;
   position: absolute;
   font-family: MomcakeBold-WyonA;
-  left: 35%;
+  left: 5%;
   top: 75%;
   text-decoration: none;
   cursor: pointer;

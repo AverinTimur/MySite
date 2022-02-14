@@ -5,6 +5,10 @@ Prefixed by https://autoprefixer.github.io
     src: url("/static/font/MomcakeBold-WyonA.otf");
     font-family: MomcakeBold-WyonA;
 }
+@font-face {
+    src: url("/static/font/Oswald-Regular.ttf");
+    font-family: Oswald-SemiBold;
+}
 @-webkit-keyframes Prodjects_ToRight2{
     0%{left: 0;}
     100%{left: -100%;}
@@ -195,7 +199,7 @@ body,html{
     position: relative;
     font-size: 10vh;
     text-align: center;
-    height: 10vh;
+    height: 11vh;
     line-height: 90%;
 }
 #Top-Text{
@@ -313,7 +317,7 @@ body,html{
     position: relative;
     font-size: 10vh;
     text-align: center;
-    height: 10vh;
+    height: 11vh;
     line-height: 90%;
 }
 #Prodjects{
@@ -474,7 +478,7 @@ body,html{
 footer{
     background-color: black;
     height: 15%;
-    top: 114%;
+    top: 116%;
     position: absolute;
     width: 100%;
 }
@@ -490,7 +494,7 @@ footer{
 }
 .Footers{
     display: inline-block;
-    width: 33.14%;
+    width: 33%;
     line-height: 0;
     top: 0;
     height: 100%;
