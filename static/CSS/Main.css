@@ -209,7 +209,6 @@ body,html{
 #Works{
     width: 100%;
     min-width: 1119px;
-    height: 8vh;
 }
 .Work,.onWork{
     height: 8vh;
@@ -478,9 +477,9 @@ body,html{
 footer{
     background-color: black;
     height: 15%;
-    top: 116%;
-    position: absolute;
+    position: relative;
     width: 100%;
+    margin-top: 1%;
 }
 .Footer{
     display: block;
