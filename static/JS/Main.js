@@ -6,12 +6,14 @@ function LanguageChange(){
         $("#Main-Text-Works").text("УМЕНИЯ");
         $("#Main-Text-Prodjects").css("font-family","Oswald-SemiBold")
         $("#Main-Text-Works").css("font-family","Oswald-SemiBold")
+        $("#LanguageBottom").attr("title","Сменить язык")
     }else if ($("#LanguageBottom").css("background-image") == 'url("' +$(document).attr("URL") + 'media/img/UKFlag.png")'){
         $("#LanguageBottom").css("background-image","url('media/img/RussianFlag.png");
         $("#Main-Text-Prodjects").text("Skills");
         $("#Main-Text-Works").text("Works");
         $("#Main-Text-Prodjects").css("font-family","MomcakeBold-WyonA")
         $("#Main-Text-Works").css("font-family","MomcakeBold-WyonA")
+        $("#LanguageBottom").attr("title","Change language")
     }
 }
 function OpenMenu(){
@@ -97,12 +99,14 @@ function Prodjects_ToLift(){
     }
 }
 
+//start
 if(navigator.language == "ru"){
     $("#LanguageBottom").css("background-image","url('media/img/UKFlag.png')");
     $("#Main-Text-Prodjects").text("РАБОТЫ");
     $("#Main-Text-Works").text("УМЕНИЯ");
     $("#Main-Text-Prodjects").css("font-family","Oswald-SemiBold")
     $("#Main-Text-Works").css("font-family","Oswald-SemiBold")
+    $("#LanguageBottom").attr("title","Сменить язык")
 }
 ProdjectList = {};
 $.ajax({

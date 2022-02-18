@@ -64,6 +64,7 @@ body,html{
     width: 100%;
     position: absolute;
     z-index: 10;
+    cursor: pointer;
 }
 .blur{
     background-color: white;
@@ -457,7 +458,12 @@ body,html{
     font-family: MomcakeBold-WyonA;
 }
 #Number-Connect{
-    background-image: url("/media/img/PhoneLogo.png");
+    mask-image: url(/media/img/telegram.svg);
+        -webkit-mask-image: url(/media/img/telegram.svg);
+    mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+    mask-size: 100%;
+        -webkit-mask-size: 100%;
 }
 #Number-Div-String{
     font-size: 2cm;

@@ -72,8 +72,9 @@ body,html{
   top: 12.5%;
   position: absolute;
   z-index: 101;
-  background-color: gray;
   border-radius: 10mm;
+  border: white 2mm;
+  border-style: solid;
 }
 #Connect-Main-Top{
     height: 33.33%;
@@ -187,9 +188,15 @@ body,html{
   background-repeat: no-repeat;
 }
 #Phone{
-  background-image: url("/media/img/Phone.png");
-  background-position: center;
-  background-size: 70%;
-  background-repeat: no-repeat;
+  mask-image: url(/media/img/telegram.svg);
+    -webkit-mask-image: url(/media/img/telegram.svg);
+  mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+  mask-size: 50%;
+    -webkit-mask-size: 50%;
+  mask-position: center;
+    -webkit-mask-position: center;
+  cursor: pointer;
+  background: black;
   cursor: pointer;
 }

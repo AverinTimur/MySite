@@ -76,18 +76,11 @@
         <p id="Menu-Open-Text">menu</p>
     </div>
     <div id="Menu">
-        <a class="Menu-Bottom" href="#Number" id="Number-Connect" title="My Number"></a>
-        <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite.git" id="Git-Bottom" title="Git on Github"></a>
-        <bottom class="Menu-Bottom" id="LanguageBottom" onclick="LanguageChange()"></bottom>
+        <a class="Menu-Bottom" href="https://t.me/AverinTimur" id="Number-Connect" title="Telegram"></a>
+        <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite.git" id="Git-Bottom" title="Git"></a>
+        <bottom class="Menu-Bottom" id="LanguageBottom" onclick="LanguageChange()" title="Change language"></bottom>
     </div>
     <div id="MenuOff" onmouseover="CloseMenu()" class="a-all" style="display: none; z-index: 5;"></div>
-    <div id="Number">
-        <a href="#" class="a-all blur"></a>
-        <div id="Number-Div">
-            <p id="Number-Div-String">WhatsApp/Telegram</p>
-            <p id="Number-Div-Number">8 (995) 675-44-38</p>
-        </div>
-    </div>
     {% csrf_token %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static "JS/Main.js" %}"></script>
