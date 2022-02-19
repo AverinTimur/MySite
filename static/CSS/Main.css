@@ -53,10 +53,10 @@ p{
 }
 body,html{
     width: 100%;
+    height: 100%;
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    min-width: 1119px;
     background-color: white;
 }
 .a-all{
@@ -73,64 +73,61 @@ body,html{
             filter: blur();
 }
 #Top{
+    line-height: 0;
     width: 100%;
     height: 25%;
     background-color: black;
-    position: absolute;
-    min-width: 1119px;
+    position: static;
+    box-sizing: content-box;
+    padding: 3vw 1.7vw;
+    text-align: center;
 }
 #Main{
     width: 100%;
     background: white;
-    position: absolute;
-    top: 25%;
-    min-width: 1119px;
+    position: relative;
 }
 #logo-a{
-    width: 5cm;
-    height: 5cm;
-    top: calc(50% - 2cm);
-    position: absolute;
-    left: calc(50% - 10.5cm);
-    border-radius: 50px;
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
 }
 #Logo-a-line1{
-    width: 5cm;
-    height: 5cm;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
-    -webkit-clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
-            clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
+    shape-outside: polygon(50% 0 ,50% 29%,78% 133%,90% 133%);
+    -webkit-clip-path: polygon(50% 0 ,50% 29%,78% 133%,90% 133%);
+            clip-path: polygon(50% 0 ,50% 29%,78% 133%,90% 133%);
     background-color: white;
-    left: 1mm;
+    left: 2.9%;
 }
 #Logo-a-line2{
-    width: 5cm;
-    height: 5cm;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
-    -webkit-clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
-            clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
+    shape-outside: polygon(50% 0 ,50% 29%,22% 133%,10% 133%);
+    -webkit-clip-path: polygon(50% 0 ,50% 29%,22% 133%,10% 133%);
+            clip-path: polygon(50% 0 ,50% 29%,22% 133%,10% 133%);
     background-color: white;
-    left: -1mm;
+    left: -2.9%;
 }
 #Logo-a-line3{
-    width: 5cm;
-    height: 5cm;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    shape-outside: polygon(2.06cm 2.3cm ,1.94cm 2.7cm,3.07cm 2.7cm,2.94cm 2.3cm);
-    -webkit-clip-path: polygon(2.06cm 2.3cm ,1.94cm 2.7cm,3.07cm 2.7cm,2.94cm 2.3cm);
-            clip-path: polygon(2.06cm 2.3cm ,1.94cm 2.7cm,3.07cm 2.7cm,2.94cm 2.3cm);
+    shape-outside: polygon(42% 58%,39% 68%,61% 68%,58% 58%);
+    -webkit-clip-path: polygon(42% 58%,39% 68%,61% 68%,58% 58%);
+            clip-path: polygon(42% 58%,39% 68%,61% 68%,58% 58%);
     background-color: white;
 }
 #Top-text-verin{
-    height: 12vh;
-    width: 6.5cm;
-    position: absolute;
-    left: calc(50% - 6.5cm);
+    height: 12vw;
+    position: relative;
+    display: inline-block;
     color: white;
-    font-size: 12vh;
-    top: calc(50% - 1.22cm);
+    font-size: 12vw;
     font-family: MomcakeBold-WyonA;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -138,13 +135,11 @@ body,html{
             user-select: none;
 }
 #Top-text-imur{
-    height: 12vh;
-    width: 5cm;
+    height: 12vw;
     position: relative;
-    left: calc(50% + 4cm);
+    display: inline-block;
     color: white;
-    font-size: 12vh;
-    top: calc(50% - 1.22cm);
+    font-size: 12vw;
     font-family: MomcakeBold-WyonA;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -152,45 +147,33 @@ body,html{
             user-select: none;
 }
 #logo-t{
-    width: 5cm;
-    height: 5cm;
-    top: calc(50% - 2cm);
-    position: absolute;
-    left: 50%;
-    border-radius: 50px;
+    width: 20%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
 }
 #Logo-t-line1{
-    width: 5cm;
-    height: 5cm;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
-    -webkit-clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
-            clip-path: polygon(2.5cm 0 ,2.5cm 1cm,3.5cm 4cm,4cm 4cm);
     background-color: white;
-    -webkit-transform: rotate(-340deg);
-        -ms-transform: rotate(-340deg);
-            transform: rotate(-340deg);
+    shape-outside: polygon(0 0,100% 0,50% 10%);
+    -webkit-clip-path: polygon(0 0,100% 0,50% 10%);
+            clip-path: polygon(0 0,100% 0,50% 10%);
 }
 #Logo-t-line2{
-    width: 5cm;
-    height: 5cm;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    shape-outside: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
-    -webkit-clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
-            clip-path: polygon(2.5cm 0 ,2.5cm 1cm,1.5cm 4cm,1cm 4cm);
     background-color: white;
-    left: 1.3cm;
-    -webkit-transform: rotate(340deg);
-        -ms-transform: rotate(340deg);
-            transform: rotate(340deg);
+    shape-outside: polygon(40% 10%,50% 15%,60% 10%,50% 100%);
+    -webkit-clip-path: polygon(40% 10%,50% 15%,60% 10%,50% 100%);
+        clip-path: polygon(40% 10%,50% 15%,60% 10%,50% 100%);
 }
 #Logo-t-line3{
-    width: 5cm;
-    height: 5cm;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    shape-outside: polygon(0.12cm 2.3cm ,0 2.7cm,4.07cm 2.7cm,3.94cm 2.3cm);
-    -webkit-clip-path: polygon(0.12cm 2.3cm ,0 2.7cm,4.07cm 2.7cm,3.94cm 2.3cm);
-            clip-path: polygon(0.12cm 2.3cm ,0 2.7cm,4.07cm 2.7cm,3.94cm 2.3cm);
     background-color: white;
     top:-2.7cm;
     left: 20%;
@@ -209,7 +192,6 @@ body,html{
 }
 #Works{
     width: 100%;
-    min-width: 1119px;
 }
 .Work,.onWork{
     height: 8vh;
@@ -323,7 +305,6 @@ body,html{
 #Prodjects{
     height: 60vh;
     position: relative;
-    min-width: 1119px;
 }
 #Prodjects-ToLift,#Prodjects-ToRight{
     height: 100%;
@@ -403,6 +384,7 @@ body,html{
 }
 #Menu{
     position: fixed;
+    top: 0;
     height: 100%;
     width: 6cm;
     border-bottom-right-radius: 10mm;
@@ -425,51 +407,13 @@ body,html{
     background-repeat: no-repeat;
     cursor: pointer;
 }
-#Number{
-    height: 100%;
-    width: 100%;
-    display: none;
-    position: absolute;
-}
-#Number:target{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-#Number-Div{
-    height: 20cm;
-    width: 20cm;
-    position: absolute;
-    top: calc(50% - 10cm);
-    left: calc(50% - 10cm);
-    background-color: white;
-    border-radius: 10mm;
-    z-index: 11;
-    border: 1mm;
-    border-style: groove;
-    border-color: black;
-}
-#Number-Div-Number{
-    width: 100%;
-    font-size: 3cm;
-    height: 20%;
-    top: 8cm;
-    position: relative;
-    font-family: MomcakeBold-WyonA;
-}
-#Number-Connect{
+#Telegram{
     mask-image: url(/media/img/telegram.svg);
         -webkit-mask-image: url(/media/img/telegram.svg);
     mask-repeat: no-repeat;
         -webkit-mask-repeat: no-repeat;
     mask-size: 100%;
         -webkit-mask-size: 100%;
-}
-#Number-Div-String{
-    font-size: 2cm;
-    font-family: 'MomcakeBold-WyonA';
-    left: 1.75cm;
-    top: 2cm;
 }
 #Git-Bottom{
     background-image: url("/media/img/git.png");
@@ -496,14 +440,29 @@ footer{
     font-family: MomcakeBold-WyonA;
     color: white;
     text-align: center;
+    position: relative;
 }
 .Footers{
     display: inline-block;
-    width: 33%;
+    position: absolute;
+    width: 33.33%;
     line-height: 0;
     top: 0;
     height: 100%;
     vertical-align: top;
+}
+#Footers1{
+    left: 0;
+}
+#Footers2{
+    left: 33.33%;
+}
+#Footers3{
+    left: 66.66%;
+}
+#MenuOff{
+    position: fixed;
+    top: 0;
 }
 @media (max-device-width: 480px){
     .Work,.onWork{

@@ -120,37 +120,6 @@ body,html{
   left: 31.25%;
   top: 12%;
 }
-#Number{
-  height: 100%;
-  width: 100%;
-  display: none;
-  position: absolute;
-}
-#Number:target{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#Number-Div{
-  height: 20cm;
-  width: 20cm;
-  position: absolute;
-  top: calc(50% - 10cm);
-  left: calc(50% - 10cm);
-  background-color: gray;
-  border-radius: 10mm;
-  z-index: 103;
-  outline: 1mm black solid;
-  opacity: 0;
-}
-#Number-Div-Number{
-  width: 100%;
-  font-size: 3cm;
-  height: 20%;
-  top: 8cm;
-  position: relative;
-  font-family: MomcakeBold-WyonA;
-}
 #Fiverr{
   background-image: url("/media/img/fiverr.png");
   background-position: center;

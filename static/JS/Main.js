@@ -9,8 +9,8 @@ function LanguageChange(){
         $("#LanguageBottom").attr("title","Сменить язык")
     }else if ($("#LanguageBottom").css("background-image") == 'url("' +$(document).attr("URL") + 'media/img/UKFlag.png")'){
         $("#LanguageBottom").css("background-image","url('media/img/RussianFlag.png");
-        $("#Main-Text-Prodjects").text("Skills");
-        $("#Main-Text-Works").text("Works");
+        $("#Main-Text-Prodjects").text("Works");
+        $("#Main-Text-Works").text("Skills");
         $("#Main-Text-Prodjects").css("font-family","MomcakeBold-WyonA")
         $("#Main-Text-Works").css("font-family","MomcakeBold-WyonA")
         $("#LanguageBottom").attr("title","Change language")
