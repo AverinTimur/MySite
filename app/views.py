@@ -5,20 +5,25 @@ from app import models
 from .models import *
 import json
 
+
 def run(request):
     WorkList = {}
 
-    #WorkList
+    # WorkList
     for i in Works.objects.all():
         WorkList[len(WorkList) + 1] = i.name
 
-    return HttpResponse(render(request,"Main.html",{"WorkList" : WorkList}))
+    return HttpResponse(render(request, "Main.html", {"WorkList": WorkList}))
 
-def work(request,url):
+
+def work(request, url):
 
     color = Works.objects.get(name=url).color
+    descriptionEN = Works.objects.get(name=url).descriptionEN
+    descriptionRU = Works.objects.get(name=url).descriptionRU
 
-    return HttpResponse(render(request,"Work.html",{"url" : url,"color" : color}))
+    return HttpResponse(render(request, "Work.html", {"url": url, "color": color, "descriptionEN": descriptionEN, "descriptionRU": descriptionRU}))
+
 
 def firstAJAX(request):
     ProdjectList = {}
@@ -27,7 +32,3 @@ def firstAJAX(request):
         ProdjectList[i.id] = i.img.url
 
     return HttpResponse(json.dumps(ProdjectList), content_type="application/json")
-
-
-
-

@@ -1,171 +1,168 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-*/
-
 @font-face {
     src: url("/static/font/MomcakeBold-WyonA.otf");
     font-family: MomcakeBold-WyonA;
 }
+@font-face {
+    src: url("/static/font/Oswald-Regular.ttf");
+    font-family: Oswald-SemiBold;
+}
 *{
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body,html{
-  height: 100%;
-  width: 100%;
-}
-.all{
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 100;
-  display: inherit;
-  cursor: pointer;
-}
-#Main{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-#Main-Title{
-  font-size: 5cm;
-  position: absolute;
-  right: 5%;
-  font-family: MomcakeBold-WyonA;
-  bottom: 75%;
-}
-#About{
-  background-color: black;
-  shape-outside: polygon(100% 100%, 0 100%, 0 0);
-  -webkit-clip-path: polygon(100% 100%, 0 100%, 0 0);
-          clip-path: polygon(100% 100%, 0 100%, 0 0);
-  width: 100%;
-  height: 100%;
-  float: left;
-  word-break: break-word;
-}
-#About-Buy{
-  font-size: 5cm;
-  position: absolute;
-  font-family: MomcakeBold-WyonA;
-  left: 5%;
-  top: 75%;
-  text-decoration: none;
-  cursor: pointer;
-}
-#Connect{
-  display: none;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  opacity: 0;
-}
-#Connect:target{
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-#Connect-Main{
-  height: 75%;
-  width: 75%;
-  left: 12.5%;
-  top: 12.5%;
-  position: absolute;
-  z-index: 101;
-  border-radius: 10mm;
-  border: white 2mm;
-  border-style: solid;
-}
-#Connect-Main-Top{
-    height: 33.33%;
     width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: white;
+}
+.a-all{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+}
+h1{
+    font-family: MomcakeBold-WyonA;
+    font-size: 13vh;
+    text-align: center;
+}
+#Top{
+    height: 15%;
+    width: 100%;
+}
+.Main{
+    margin: 5%;
+    word-break: break-all;
+    font-size: 5vh;
+}
+#Ru{
+    font-family: Oswald-SemiBold;
+}
+#En{
+    font-family: MomcakeBold-WyonA;
+}
+#Menu-Open{
+    height: 30%;
+    width: 7mm;
+    top: 35%;
+    position: absolute;
+    z-index: 7;
+}
+#Menu-Open-Text{
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    font-size: 7mm;
     position: relative;
+    top: calc(50% - 2.2cm);
+    font-family: MomcakeBold-WyonA;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
-#Connect-Main-Freelance{
-    height: 66.66%;
-    width: 100%;
+#Menu{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 6cm;
+    border-bottom-right-radius: 10mm;
+    border-top-right-radius: 10mm;
+    z-index: 6;
+    display: none;
+    background-color: white;
+    opacity: 0.95;
 }
-#Connect-Main-Freelance-Line1{
-  width: 100%;
-  height: 50%;
+.Menu-Bottom{
+    height: 4cm;
+    width: 4cm;
+    background: black;
+    position: relative;
+    border-radius: 10mm;
+    margin: 1cm;
+    display: block;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
-#Connect-Main-Freelance-Line1,#Connect-Main-Freelance-Line2{
-  width: 100%;
-  height: 50%;
+#MenuOff{
+    position: fixed;
+    top: 0;
 }
-.Connect-Main-Freelance-Line1-Div{
-  height: 100%;
-  width: 24%;
-  position: relative;
-  display: inline-block;
-  border-radius: 10mm;
+#Menu-Close {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    display: none;
+    fill: black;
 }
-.Connect-Main-Freelance-Line2-Div{
-  height: 100%;
-  width: 49.7%;
-  position: relative;
-  display: inline-block;
+#Telegram{
+    mask-image: url(/media/img/telegram.svg);
+        -webkit-mask-image: url(/media/img/telegram.svg);
+    mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+    mask-size: 100%;
+        -webkit-mask-size: 100%;
 }
-.Connect-Main-Freelance-Line1-A{
-  height: 75%;
-  width: 75%;
-  position: absolute;
-  left: 12%;
-  top: 12%;
-}
-.Connect-Main-Freelance-Line2-A{
-  height: 75%;
-  width: 37.5%;
-  position: absolute;
-  left: 31.25%;
-  top: 12%;
-}
-#Fiverr{
-  background-image: url("/media/img/fiverr.png");
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
+#Git-Bottom{
+    background-image: url("/media/img/git.png");
 }
 #Kwork{
-  background-image: url("/media/img/Kwork.png");
-  background-position: center;
-  background-size: 225%;
-  background-repeat: no-repeat;
+    display: inline-block;
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    background-image: url("/media/img/Kwork.png");
+    left: 10%;
+    margin-top: 1%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
-#FreelanceJob{
-  background-image: url("/media/img/FreelanceJob.png");
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
+#Fiverr{
+    background-image: url("/media/img/fiverr.png");
+    display: inline-block;
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    right: 10%;
+    margin-top: 1%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
-#FreelanceHabre{
-  background-image: url("/media/img/FreelanceHabre.png");
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
+#LanguageBottom{
+    background-image: url("/media/img/RussianFlag.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 94%;
 }
-#Pchel{
-  background-image: url("/media/img/Pchel.png");
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-#Weblancer{
-  background-image: url("/media/img/Weblancer.png");
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-#Phone{
-  mask-image: url(/media/img/telegram.svg);
-    -webkit-mask-image: url(/media/img/telegram.svg);
-  mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-  mask-size: 50%;
-    -webkit-mask-size: 50%;
-  mask-position: center;
-    -webkit-mask-position: center;
-  cursor: pointer;
-  background: black;
-  cursor: pointer;
+@media (max-device-width: 480px){
+    .Work,.onWork{
+        width: 90%;
+        height: 4cm;
+        margin-left: 8%;
+    }
+    .Menu-Bottom{
+        height: 26.66vw;
+        width: 26.66vw;
+        margin: 6.67vw;
+    }
+    #Menu-Open{
+        width: 8vw;
+    }
+    #Menu-Open-Text {
+        font-size: 8vw;
+    }
+    #Menu {
+        width: 40%;
+    }
+    #Menu-Close{
+        display: inline-block;
+    }
 }

@@ -205,11 +205,9 @@ body,html{
 }
 .onWork{
     color: black;
-    min-width: 4cm;
 }
 .Work{
     color: white;
-    min-width: 4cm;
 }
 .Work::after{
     -webkit-animation-timing-function: ease-in;
@@ -464,11 +462,18 @@ footer{
     position: fixed;
     top: 0;
 }
+#Menu-Close{
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    display: none;
+    fill: black;
+}
 @media (max-device-width: 480px){
     .Work,.onWork{
         width: 90%;
         height: 4cm;
-        margin-left: 5%;
+        margin-left: 8%;
     }
     .Menu-Bottom{
         height: 26.66vw;
@@ -479,12 +484,15 @@ footer{
     font-size: 3cm;
 }
     #Menu-Open{
-        width: 5vw;
+        width: 8vw;
     }
     #Menu-Open-Text {
-        font-size: 5vw;
+        font-size: 8vw;
     }
     #Menu {
         width: 40%;
+    }
+    #Menu-Close{
+        display: inline-block;
     }
 }
