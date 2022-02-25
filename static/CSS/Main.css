@@ -78,7 +78,8 @@ body,html{
     height: 25%;
     background-color: black;
     position: static;
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
     padding: 3vw 1.7vw;
     text-align: center;
 }

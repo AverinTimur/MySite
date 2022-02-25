@@ -1,3 +1,7 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+*/
+
 @font-face {
     src: url("/static/font/MomcakeBold-WyonA.otf");
     font-family: MomcakeBold-WyonA;
@@ -141,6 +145,16 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 94%;
+}
+#MainPage p{
+    font-size: 2cm;
+    color: white;
+    font-family: 'MomcakeBold-WyonA';
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    bottom: 25%;
 }
 @media (max-device-width: 480px){
     .Work,.onWork{
