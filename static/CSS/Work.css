@@ -127,6 +127,8 @@ h1{
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+    border: black 1mm solid;
+    border-radius: 100%;
 }
 #Fiverr{
     background-image: url("/media/img/fiverr.png");
@@ -139,6 +141,8 @@ h1{
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+    border: black 1mm solid;
+    border-radius: 100%;
 }
 #LanguageBottom{
     background-image: url("/media/img/RussianFlag.png");
