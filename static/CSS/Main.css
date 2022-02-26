@@ -299,12 +299,12 @@ body,html{
     line-height: 90%;
 }
 #Prodjects{
-    height: 60vh;
+    height: 54vw;
     position: relative;
 }
 #Prodjects-ToLift,#Prodjects-ToRight{
     height: 100%;
-    width: 1.7cm;
+    width: 5.8%;
     display: inline-block;
     position: absolute;
     z-index: 3;
@@ -316,13 +316,13 @@ body,html{
     right: 0;
 }
 .Prodjects-Change-Text{
+    text-align: center;
     line-height: 0;
-    font-size: 40mm;
+    font-size: 12vw;
     font-family: 'MomcakeBold-WyonA';
-    opacity: 0.3;
+    opacity: 0.1;
     top: calc(50% - 7.5mm);
     position: absolute;
-    height: 1.5cm;
     width: 100%;
     cursor: pointer;
     -webkit-user-select: none;
@@ -336,7 +336,6 @@ body,html{
     overflow: hidden;
     left: 5.8%;
     position: absolute;
-    border-radius: 10mm;
 }
 .Prodject{
     height: 100%;
