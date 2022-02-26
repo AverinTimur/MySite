@@ -58,6 +58,7 @@ body,html{
     overflow-x: hidden;
     overflow-y: auto;
     background-color: white;
+    scrollbar-width: none;
 }
 .a-all{
     height: 100%;

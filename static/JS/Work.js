@@ -36,3 +36,6 @@ if(navigator.language == "ru"){
     $("#En").css("display","none");
     $("#LanguageBottom").attr("title","Сменить язык");
 }
+else{
+    $("#Ru").css("display","none");
+}
