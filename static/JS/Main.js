@@ -42,17 +42,17 @@ function AnimationUnHover(id){
 }
 function Prodjects_ToRight(){
     if ($("#Prodject2").css("animationName") != "Prodjects_ToRight2") {
-        if (Prodject_1_Num == i) {
+        if (Prodject_1_Num == Prodjects.length - 1) {
             Prodject_1_Num = 0;
         } else {
             Prodject_1_Num++;
         }
-        if (Prodject_2_Num == i) {
+        if (Prodject_2_Num == Prodjects.length - 1) {
             Prodject_2_Num = 0;
         } else {
             Prodject_2_Num++;
         }
-        if (Prodject_3_Num == i) {
+        if (Prodject_3_Num == Prodjects.length - 1) {
             Prodject_3_Num = 0;
         } else {
             Prodject_3_Num++;
@@ -60,10 +60,10 @@ function Prodjects_ToRight(){
         $("#Prodject2").css("animation-name","Prodjects_ToRight2");
         $("#Prodject3").css("animation-name","Prodjects_ToRight3");
         setTimeout(function () {
-            $("#Prodject1").css("background-image","url('" + ProdjectList[Prodject_1_Num] + "')");
-            $("#Prodject2").css("background-image","url('" + ProdjectList[Prodject_2_Num] + "')");
-            $("#Prodject2").attr("href",ProdjectList[Prodject_2_Num]);
-            $("#Prodject3").css("background-image","url('" + ProdjectList[Prodject_3_Num] + "')");
+            $("#Prodject1").css("background-image","url('" + ProdjectList[Prodjects[Prodject_1_Num]] + "')");
+            $("#Prodject2").css("background-image","url('" + ProdjectList[Prodjects[Prodject_2_Num]] + "')");
+            $("#Prodject2").attr("href",ProdjectList[Prodjects[Prodject_2_Num]]);
+            $("#Prodject3").css("background-image","url('" + ProdjectList[Prodjects[Prodject_3_Num]] + "')");
             $("#Prodject2").css("animation-name","");
             $("#Prodject3").css("animation-name","");
         }, 390)
@@ -72,27 +72,27 @@ function Prodjects_ToRight(){
 function Prodjects_ToLift(){
     if ($("#Prodject2").css("animationName") != "Prodjects_ToLeft2") {
         if (Prodject_1_Num == 0){
-            Prodject_1_Num = i;
+            Prodject_1_Num = Prodjects.length - 1;
         } else {
             Prodject_1_Num--;
         }
         if (Prodject_2_Num == 0) {
-            Prodject_2_Num = i;
+            Prodject_2_Num = Prodjects.length - 1;
         } else {
             Prodject_2_Num--;
         }
         if (Prodject_3_Num == 0) {
-            Prodject_3_Num = i;
+            Prodject_3_Num = Prodjects.length - 1;
         } else {
             Prodject_3_Num--;
         }
         $("#Prodject1").css("animation-name","Prodjects_ToLeft1");
         $("#Prodject2").css("animation-name","Prodjects_ToLeft2");
         setTimeout(function () {
-            $("#Prodject1").css("background-image","url('" + ProdjectList[Prodject_1_Num] + "')");
-            $("#Prodject2").css("background-image","url('" + ProdjectList[Prodject_2_Num] + "')");
-            $("#Prodject2").attr("href",ProdjectList[Prodject_2_Num]);
-            $("#Prodject3").css("background-image","url('" + ProdjectList[Prodject_3_Num] + "')");
+            $("#Prodject1").css("background-image","url('" + ProdjectList[Prodjects[Prodject_1_Num]] + "')");
+            $("#Prodject2").css("background-image","url('" + ProdjectList[Prodjects[Prodject_2_Num]] + "')");
+            $("#Prodject2").attr("href",ProdjectList[Prodjects[Prodject_2_Num]]);
+            $("#Prodject3").css("background-image","url('" + ProdjectList[Prodjects[Prodject_3_Num]] + "')");
             $("#Prodject1").css("animation-name","");
             $("#Prodject2").css("animation-name","");
         }, 390)
@@ -109,27 +109,29 @@ if(navigator.language == "ru"){
     $("#LanguageBottom").attr("title","Сменить язык")
 }
 ProdjectList = {};
+Prodjects = Array();
 $.ajax({
     method : "Post",
     url: $(document).attr("URL") + "firstAJAX/",
     contentType: "json",
     headers: {"X-CSRFToken": $('[name=csrfmiddlewaretoken]').attr("value")},
     success: function(data){
-        for (i in data){
+        for (const i in data){
+            Prodjects.push(i)
             ProdjectList[i] = data[i];
         }
-        Prodject_1_Num = i;
+        Prodject_1_Num = Prodjects.length - 1;
         Prodject_2_Num = 0;
-        if(i>0){
+        if(Prodjects.length - 1>0){
             Prodject_3_Num = 1;
         }
         else{
             Prodject_3_Num = 0;
         }
-        $("#Prodject1").css("background-image","url('" + ProdjectList[Prodject_1_Num] + "')");
-        $("#Prodject2").css("background-image","url('" + ProdjectList[Prodject_2_Num] + "')");
-        $("#Prodject2").attr("href",ProdjectList[Prodject_2_Num]);
-        $("#Prodject3").css("background-image","url('" + ProdjectList[Prodject_3_Num] + "')");
+        $("#Prodject1").css("background-image","url('" + ProdjectList[Prodjects[Prodject_1_Num]] + "')");
+        $("#Prodject2").css("background-image","url('" + ProdjectList[Prodjects[Prodject_2_Num]] + "')");
+        $("#Prodject2").attr("href",ProdjectList[Prodjects[Prodject_2_Num]]);
+        $("#Prodject3").css("background-image","url('" + ProdjectList[Prodjects[Prodject_3_Num]] + "')");
         setInterval(function (){Prodjects_ToRight()},10000);
     },
 });

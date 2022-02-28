@@ -1,16 +1,17 @@
-from pathlib import Path
 import os
+from environs import Env
+from pathlib import Path
+
+env = Env()
+env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = env.str("SECRET_KEY")
 
+DEBUG = env.bool("DEBUG")
 
-SECRET_KEY = 'django-insecure-=xn%cgtg+q7u0#w1*!95hcj84yustpq@zjob5ahp!*4nld$9^b'
-
-
-DEBUG = True
-
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = env.list('HOSTS')
 
 CORS_ALLOWED_ORIGINS = [
     "https://ajax.googleapis.com",
@@ -57,17 +58,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Me.wsgi.application'
 
-
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': env.str('DBEngine'),
+        'NAME': BASE_DIR / env.str('DBPath'),
+        'USER': env('DBUser'),
+        'PASSWORD': env('DBPassword'),
+        'HOST': env('DBHost'),
     }
 }
-
-
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -84,9 +83,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -98,12 +94,12 @@ USE_L10N = True
 USE_TZ = True
 
 
-MEDIA_URL =  "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR,"media")
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"static")
+    os.path.join(BASE_DIR, "static")
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
