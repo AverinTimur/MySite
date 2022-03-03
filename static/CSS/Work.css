@@ -191,4 +191,7 @@ h1{
     #Menu-Close{
         display: inline-block;
     }
+    #MainPage p{
+        font-size: 14vw;
+    }
 }

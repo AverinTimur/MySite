@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,9 +75,10 @@
         <p id="Menu-Open-Text">menu</p>
     </div>
     <div id="Menu">
-        <img src="/media/img/x.svg" id="Menu-Close" onclick="CloseMenu()"></img>
+        <img src="/media/img/x.svg" id="Menu-Close" onclick="CloseMenu()">
         <a class="Menu-Bottom" href="https://t.me/AverinTimur" id="Telegram" title="Telegram"></a>
         <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite.git" id="Git-Bottom" title="Git"></a>
+        <a class='Menu-Bottom' href="{% url 'contact' %}" id="Chat"><p>CHAT</p></a>
         <bottom class="Menu-Bottom" id="LanguageBottom" onclick="LanguageChange()" title="Change language"></bottom>
     </div>
     <div id="MenuOff" onmouseover="CloseMenu()" class="a-all" style="display: none; z-index: 5;"></div>

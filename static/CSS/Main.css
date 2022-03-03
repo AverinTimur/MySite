@@ -47,6 +47,7 @@ Prefixed by https://autoprefixer.github.io
 *{
     margin: 0;
     padding: 0;
+    line-height: 100%;
 }
 p{
     position: absolute;
@@ -474,6 +475,16 @@ footer{
     display: none;
     fill: black;
 }
+#Chat p{
+    font-size: 2cm;
+    color: white;
+    font-family: 'MomcakeBold-WyonA';
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    bottom: 25%;
+}
 @media (max-device-width: 480px){
     .Work,.onWork{
         width: 90%;
@@ -499,5 +510,8 @@ footer{
     }
     #Menu-Close{
         display: inline-block;
+    }
+    #Chat p{
+        font-size: 14vw;
     }
 }

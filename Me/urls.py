@@ -5,10 +5,11 @@ from Me import settings
 from app import views
 
 urlpatterns = [
-    path("",views.run,name="run"),
-    path("firstAJAX/",views.firstAJAX,name="firstAJAX"),
-    path("work/<url>/",views.work),
-    path("admin/",admin.site.urls)
+    path("", views.run, name="run"),
+    path("firstAJAX/", views.firstAJAX, name="firstAJAX"),
+    path("work/<url>/", views.work),
+    path("admin/", admin.site.urls),
+    path("contact", views.contact, name='contact')
 ]
 
 if settings.DEBUG:

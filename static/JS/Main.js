@@ -1,19 +1,29 @@
 //functions
+function Russian(){
+    $("#LanguageBottom").css("background-image","url('media/img/UKFlag.png')");
+    $("#Main-Text-Prodjects").text("работы");
+    $("#Main-Text-Works").text("навыки");
+    $("#Chat p").text("ЧАТ");
+    $("#Main-Text-Prodjects").css("font-family","Oswald-SemiBold")
+    $("#Main-Text-Works").css("font-family","Oswald-SemiBold")
+    $("#Chat p").css("font-family","Oswald-SemiBold")
+    $("#LanguageBottom").attr("title","Сменить язык")
+}
+function English(){
+    $("#LanguageBottom").css("background-image","url('media/img/RussianFlag.png");
+    $("#Main-Text-Prodjects").text("Works");
+    $("#Main-Text-Works").text("Skills");
+    $("#Chat p").text("Chat");
+    $("#Main-Text-Prodjects").css("font-family","MomcakeBold-WyonA")
+    $("#Main-Text-Works").css("font-family","MomcakeBold-WyonA")
+    $("#Chat p").css("font-family","MomcakeBold-WyonA")
+    $("#LanguageBottom").attr("title","Change language")
+}
 function LanguageChange(){
     if ($("#LanguageBottom").css("background-image") == 'url("' +$(document).attr("URL") + 'media/img/RussianFlag.png")'){
-        $("#LanguageBottom").css("background-image","url('media/img/UKFlag.png')");
-        $("#Main-Text-Prodjects").text("работы");
-        $("#Main-Text-Works").text("навыки");
-        $("#Main-Text-Prodjects").css("font-family","Oswald-SemiBold")
-        $("#Main-Text-Works").css("font-family","Oswald-SemiBold")
-        $("#LanguageBottom").attr("title","Сменить язык")
+        Russian()
     }else if ($("#LanguageBottom").css("background-image") == 'url("' +$(document).attr("URL") + 'media/img/UKFlag.png")'){
-        $("#LanguageBottom").css("background-image","url('media/img/RussianFlag.png");
-        $("#Main-Text-Prodjects").text("Works");
-        $("#Main-Text-Works").text("Skills");
-        $("#Main-Text-Prodjects").css("font-family","MomcakeBold-WyonA")
-        $("#Main-Text-Works").css("font-family","MomcakeBold-WyonA")
-        $("#LanguageBottom").attr("title","Change language")
+        English()
     }
 }
 function OpenMenu(){
@@ -101,12 +111,7 @@ function Prodjects_ToLift(){
 
 //start
 if(navigator.language == "ru"){
-    $("#LanguageBottom").css("background-image","url('media/img/UKFlag.png')");
-    $("#Main-Text-Prodjects").text("работы");
-    $("#Main-Text-Works").text("навыки");
-    $("#Main-Text-Prodjects").css("font-family","Oswald-SemiBold")
-    $("#Main-Text-Works").css("font-family","Oswald-SemiBold")
-    $("#LanguageBottom").attr("title","Сменить язык")
+    Russian()
 }
 ProdjectList = {};
 Prodjects = Array();

@@ -4,7 +4,13 @@ from django.http import JsonResponse
 from app import models
 from .models import *
 import json
+import smtplib
+from environs import Env
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
+env = Env()
+env.read_env()
 
 def run(request):
     WorkList = {}
@@ -23,6 +29,20 @@ def work(request, url):
     descriptionRU = Works.objects.get(name=url).descriptionRU
 
     return HttpResponse(render(request, "Work.html", {"url": url, "color": color, "descriptionEN": descriptionEN, "descriptionRU": descriptionRU}))
+
+
+def contact(request):
+    if 'name' in request.POST:
+        name = request.POST.get('name')
+        contact = request.POST.get('contact')
+        text = request.POST.get('text')
+        massage = MIMEText(f'<p>Name: {name}</p><p>Contact: {contact}</p><p>{text}</p>', 'html')
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.login(env.str('Email'), env.str('EmailPassword'))
+        server.sendmail(env.str('Email'), env.str('Email'), massage.as_string())
+        server.quit()
+
+    return HttpResponse(render(request, "Contact.html"))
 
 
 def firstAJAX(request):
