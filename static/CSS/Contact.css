@@ -50,6 +50,7 @@ input {
     top: 15vh;
     display: grid;
     height: 85vh;
+    width: 100%;
     grid-template-rows: 5vh 70vh 10vh;
     grid-template-columns: 25vw 75vw;
 }
@@ -65,9 +66,10 @@ input {
 }
 #MenuOpenBotton{
     cursor: pointer;
-    height: 15vh;
-    width: 15vh;
+    height: 10vw;
+    width: 10vw;
     position: absolute;
+    top: calc(50% - 5vw);
 }
 #Menu-Close{
     position: absolute;
@@ -136,5 +138,15 @@ input {
     }
     #MainPage p{
         font-size: 14vw;
+    }
+    #Main{
+        grid-template-rows: 5vh 5vh 65vh 10vh;
+        grid-template-columns: none;
+    }
+    #Text{
+        grid-column: 1 / 1;
+    }
+    #Submit{
+        grid-column: 1 / 1;
     }
 }

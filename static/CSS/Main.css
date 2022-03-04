@@ -411,6 +411,15 @@ body,html{
     background-repeat: no-repeat;
     cursor: pointer;
 }
+#MenuOpenBotton{
+    cursor: pointer;
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+    top: calc(50% - 5vw);
+    fill: white;
+    display: none;
+}
 #Telegram{
     mask-image: url(/media/img/telegram.svg);
         -webkit-mask-image: url(/media/img/telegram.svg);
@@ -487,9 +496,9 @@ footer{
 }
 @media (max-device-width: 480px){
     .Work,.onWork{
-        width: 90%;
+        width: 95%;
         height: 4cm;
-        margin-left: 8%;
+        margin-left: 2.5%;
     }
     .Menu-Bottom{
         height: 26.66vw;
@@ -513,5 +522,18 @@ footer{
     }
     #Chat p{
         font-size: 14vw;
+    }
+    #MenuOpenBotton{
+        display: inline-block;
+    }
+    #Menu-Open{
+        display: none;
+    }
+    .Prodjects-Change-Text{
+        opacity: 0.6;
+    }
+    #Prodjects-List{
+        width: 100%;
+        left: 0;
     }
 }

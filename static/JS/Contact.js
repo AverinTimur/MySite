@@ -48,7 +48,7 @@ if(navigator.language == 'ru'){
     $('#Title').text('ЧАТ')
     $('#Title').css("font-family","Oswald-SemiBold")
     $('#Name').val("Имя")
-    $('#Contact').val("Контакты(email, telegram, сайт)")
+    $('#Contact').val("Контакты")
     $('#Submit').val("ОТПРАВИТЬ")
     $('#Submit').css("font-family","Oswald-SemiBold")
 }

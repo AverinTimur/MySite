@@ -24,7 +24,7 @@
     </div>
     <form id="Main" method="post">{% csrf_token %}
         <input id="Name" type="text" required mozactionhint="next" value="Name" onfocus="DelText(this.id)" onblur="TextWrite(this.id)" name="name">
-        <input id="Contact" type="text" required mozactionhint="go" value="Contact(email, telegram, website)" onfocus="DelText(this.id)" onblur="TextWrite(this.id)" name="contact">
+        <input id="Contact" type="text" required mozactionhint="go" value="Contact" onfocus="DelText(this.id)" onblur="TextWrite(this.id)" name="contact">
         <textarea id="Text" required mozactionhint="search" value="Massage" name="text"></textarea>
         <input type="submit" id="Submit" required value="submit">
     </form>
