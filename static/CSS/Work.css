@@ -1,23 +1,32 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-*/
+/* Prefixed by https://autoprefixer.github.io */
+
+/* Fonts */
 
 @font-face {
-    src: url("/static/font/MomcakeBold-WyonA.otf");
+    src: url(/static/font/MomcakeBold-WyonA.otf);
     font-family: MomcakeBold-WyonA;
 }
 @font-face {
-    src: url("/static/font/Oswald-Regular.ttf");
+    src: url(/static/font/Oswald-Regular.ttf);
     font-family: Oswald-SemiBold;
 }
-::-webkit-scrollbar{
+
+/* Main features */
+
+::-webkit-scrollbar {
     display: none;
 }
-*{
+* {
     margin: 0;
     padding: 0;
+    border: none;
+    background: none center no-repeat;
+    background-size: 100%;
+    line-height: 100%;
+    font-family: MomcakeBold-WyonA, sans-serif;
 }
-body,html{
+body,
+html {
     width: 100%;
     height: 100%;
     padding: 0;
@@ -26,91 +35,121 @@ body,html{
     background-color: white;
     scrollbar-width: none;
 }
-.a-all{
+.all_size {
     height: 100%;
     width: 100%;
     position: absolute;
     z-index: 10;
     cursor: pointer;
 }
-h1{
-    font-family: MomcakeBold-WyonA;
-    font-size: 13vh;
-    text-align: center;
-}
-#Top{
+
+/* Title */
+
+#top {
     height: 15%;
     width: 100%;
 }
-.Main{
-    margin: 8vw;
-    word-break: break-all;
+h1 {
+    font-size: 13vh;
+    text-align: center;
+}
+
+/* Main */
+
+.main {
+    margin: 8vw 8vw 6% 8vw;
     font-size: 5vh;
-    margin-bottom: 6%;
+    word-break: break-all;
 }
-#Ru{
-    font-family: Oswald-SemiBold;
+#Ru {
+    font-family: Oswald-SemiBold, sans-serif;
 }
-#En{
-    font-family: MomcakeBold-WyonA;
+#connect {
+    width: 100%;
+    height: 16vw;
+    position: relative;
 }
-#Menu-Open{
+#Kwork {
+    position: absolute;
+    height: 15vw;
+    width: 15vw;
+    left: 20%;
+    border: black 1mm solid;
+    border-radius: 100%;
+    display: inline-block;
+    background-image: url("/media/img/Kwork.png");
+}
+#Fiverr {
+    position: absolute;
+    height: 15vw;
+    width: 15vw;
+    right: 20%;
+    border: black 1mm solid;
+    border-radius: 100%;
+    display: inline-block;
+    background-image: url("/media/img/fiverr.png");
+}
+
+/* Menu open button */
+
+#menu_open_button {
+    position: absolute;
     height: 30%;
     width: 7mm;
     top: 35%;
-    position: absolute;
     z-index: 7;
 }
-#Menu-Open-Text{
+#menu_open_text {
+    position: relative;
+    top: calc(50% - 2.2cm);
+    font-size: 7mm;
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
-    font-size: 7mm;
-    position: relative;
-    top: calc(50% - 2.2cm);
-    font-family: MomcakeBold-WyonA;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
 }
-#Menu{
+
+/* Menu */
+
+#menu {
     position: fixed;
-    top: 0;
     height: 100%;
     width: 6cm;
+    top: 0;
     border-bottom-right-radius: 10mm;
     border-top-right-radius: 10mm;
-    z-index: 6;
     display: none;
+    z-index: 6;
     background-color: white;
     opacity: 0.95;
 }
-.Menu-Bottom{
-    height: 4cm;
-    width: 4cm;
-    background: black;
-    position: relative;
-    border-radius: 10mm;
-    margin: 1cm;
-    display: block;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-#MenuOff{
+#menu_close_area {
     position: fixed;
     top: 0;
+    display: none;
+    z-index: 5;
 }
-#Menu-Close {
+#menu_close_button {
     position: absolute;
     width: 4vh;
     height: 4vh;
     display: none;
     fill: black;
 }
-#Telegram{
+.menu_button {
+    position: relative;
+    height: 4cm;
+    width: 4cm;
+    margin: 1cm;
+    border-radius: 10mm;
+    display: block;
+    background-color: black;
+    cursor: pointer;
+}
+#telegram {
     mask-image: url(/media/img/telegram.svg);
         -webkit-mask-image: url(/media/img/telegram.svg);
     mask-repeat: no-repeat;
@@ -118,80 +157,65 @@ h1{
     mask-size: 100%;
         -webkit-mask-size: 100%;
 }
-#Git-Bottom{
-    background-image: url("/media/img/git.png");
+#git_button {
+    mask-image: url(/media/img/git.svg);
+        -webkit-mask-image: url(/media/img/git.svg);
+    mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+    mask-size: 100%;
+        -webkit-mask-size: 100%;
 }
-#Kwork{
-    display: inline-block;
-    height: 15vw;
-    width: 15vw;
-    position: absolute;
-    background-image: url("/media/img/Kwork.png");
-    left: 20%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    border: black 1mm solid;
-    border-radius: 100%;
-}
-#Fiverr{
-    background-image: url("/media/img/fiverr.png");
-    display: inline-block;
-    height: 15vw;
-    width: 15vw;
-    position: absolute;
-    right: 20%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    border: black 1mm solid;
-    border-radius: 100%;
-}
-#LanguageBottom{
-    background-image: url("/media/img/RussianFlag.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 94%;
-}
-#MainPage p{
-    font-size: 2cm;
-    color: white;
-    font-family: 'MomcakeBold-WyonA';
-    text-align: center;
-    vertical-align: middle;
+#chat p {
     position: absolute;
     width: 100%;
     bottom: 25%;
+    font-size: 2cm;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
 }
-#Connect{
+#language_change_button {
+    background-image: url(/media/img/RussianFlag.png);
+    background-size: 94%;
+}
+#main_page_link p {
+    position: absolute;
     width: 100%;
-    height: 16vw;
-    position: relative;
+    bottom: 25%;
+    font-size: 2cm;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
 }
-@media (max-device-width: 480px){
-    .Work,.onWork{
-        width: 90%;
-        height: 4cm;
-        margin-left: 8%;
+
+@media (max-device-width: 480px) {
+
+    /* Menu open button */
+
+    #menu_open_button {
+        width: 8vw;
     }
-    .Menu-Bottom{
+    #menu_open_text {
+        font-size: 8vw;
+    }
+
+    /* Menu */
+
+    #menu {
+        width: 40%;
+    }
+    #menu_close_button {
+        display: inline-block;
+    }
+    .menu_button {
         height: 26.66vw;
         width: 26.66vw;
         margin: 6.67vw;
     }
-    #Menu-Open{
-        width: 8vw;
+    #main_page_link p {
+        font-size: 14vw;
     }
-    #Menu-Open-Text {
-        font-size: 8vw;
-    }
-    #Menu {
-        width: 40%;
-    }
-    #Menu-Close{
-        display: inline-block;
-    }
-    #MainPage p{
+    #chat p {
         font-size: 14vw;
     }
 }

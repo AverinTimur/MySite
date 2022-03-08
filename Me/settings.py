@@ -1,4 +1,4 @@
-import os
+from os import path
 from environs import Env
 from pathlib import Path
 
@@ -38,6 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
+
 ROOT_URLCONF = 'Me.urls'
 
 TEMPLATES = [
@@ -61,7 +62,7 @@ WSGI_APPLICATION = 'Me.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': env.str('DBEngine'),
-        'NAME': BASE_DIR / env.str('DBPath'),
+        'NAME': eval(env.str('DBPath')),
         'USER': env('DBUser'),
         'PASSWORD': env('DBPassword'),
         'HOST': env('DBHost'),
@@ -93,13 +94,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = path.join(BASE_DIR, "media")
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    path.join(BASE_DIR, "static")
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

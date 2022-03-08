@@ -1,47 +1,49 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Averin Timur">
-    <meta name="description" content="It's my site.It work with Django(Python framework), HTML/CSS, JavaScript/jQuery.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="content-language" content="en-US">
-    <meta http-equiv="content-type" content="text/html">
-    <meta name="keywords" content="Django(Python framework), HTML/CSS, JavaScript/jQuery">
-    <meta http-equiv="content-security-policy" content="default-src * 'unsafe-inline'">
-    <title>{{ url }}</title>
-    <link rel="icon" type="image/png" href="../../media/img/Logo.png">
-    <link rel="stylesheet" type="text/css" href="{% static 'CSS/Work.css' %}">
-    <style>
-        #Top{
-            background-color:{{ color }};
-        }
-    </style>
+  <title>{{ url }}</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Averin Timur">
+  <meta name="description" content="It's my site. It works with Django(Python framework), HTML/CSS, JavaScript/jQuery.">
+  <meta name="keywords" content="Django(Python framework), HTML/CSS, JavaScript/jQuery">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-language" content="ru-RU">
+  <meta http-equiv="content-type" content="text/html">
+  <meta http-equiv="content-security-policy" content="default-src * 'unsafe-inline'">
+  <link rel="icon" type="image/png" href="../media/img/Logo.png">
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/Work.css' %}">
+  <style>
+    #top{
+      background-color:{{ color }};
+    }
+  </style>
 </head>
 <body>
-    <div id="Top">
-        <h1>{{ url }}</h1>
-    </div>
-    <p class="Main" id="En">{{ descriptionEN }}</p>
-    <p class="Main" id="Ru">{{ descriptionRU }}</p>
-    <div id="Connect">
-        <a id="Kwork" href="https://kwork.ru/user/averintimur"></a>
-        <a id="Fiverr" href="https://www.fiverr.com/averintimur"></a>
-    </div>
-    <div id="Menu-Open" onmouseover="OpenMenu()">
-        <p id="Menu-Open-Text">menu</p>
-    </div>
-    <div id="Menu">
-        <img src="/media/img/x.svg" id="Menu-Close" onclick="CloseMenu()" alt="close">
-        <a class="Menu-Bottom" href="https://t.me/AverinTimur" id="Telegram" title="Telegram"></a>
-        <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite.git" id="Git-Bottom" title="Git"></a>
-        <bottom class="Menu-Bottom" id="LanguageBottom" onclick="LanguageChange()" title="Change language" alt="Change Language"></bottom>
-        <a class="Menu-Bottom" href="/" id="MainPage" title="Main Page"><p>MAIN</p></a>
-    </div>
-    <bottom id="MenuOff" onmouseover="CloseMenu()" class="a-all" style="display: none; z-index: 5;"></bottom>
-    {% csrf_token %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{% static "JS/Work.js" %}"></script>
+  <div id="top">
+    <h1>{{ url }}</h1>
+  </div>
+  <p id="En" class="main">{{ en_description }}</p>
+  <p id="Ru" class="main">{{ ru_description }}</p>
+  <div id="connect">
+    <a id="Kwork" href="https://kwork.ru/user/averintimur"></a>
+    <a id="Fiverr" href="https://www.fiverr.com/averintimur"></a>
+  </div>
+  <div id="menu_open_button" onmouseover="open_menu()">
+    <p id="menu_open_text">menu</p>
+  </div>
+  <div id="menu">
+    <img id="menu_close_button" src="/media/img/x.svg" alt='close menu' onclick="close_menu()">
+    <a id="telegram" class="menu_button" href="https://t.me/AverinTimur" title="Telegram"></a>
+    <a id="git_button" class="menu_button" href="https://github.com/AverinTimur/MySite.git" title="GitHub"></a>
+    <button id="language_change_button" class="menu_button" title="Change language" onclick="change_language()"></button>
+    <a id="chat" class='menu_button' href="{% url 'contact' %}" title="Сhat"><p>CHAT</p></a>
+    <a id="main_page_link" class="menu_button" href="/" title="Main Page"><p>MAIN</p></a>
+  </div>
+  <div id="menu_close_area" class="all_size" onmouseover="close_menu()"></div>
+  {% csrf_token %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{% static "JS/Work.js" %}"></script>
 </body>
 </html>

@@ -3,39 +3,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Averin Timur</title>
-    <link rel="icon" type="image/png" href="media/img/Logo.png">
-    <link rel="stylesheet" type="text/css" href="{% static 'CSS/Contact.css' %}">
-    <meta name="author" content="Averin Timur">
-    <meta name="description" content="It's my site.It work with Django(Python framework), HTML/CSS, JavaScript/jQuery.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="content-language" content="ru-RU">
-    <meta http-equiv="content-type" content="text/html">
-    <meta name="keywords" content="Django(Python framework), HTML/CSS, JavaScript/jQuery">
-    <meta http-equiv="content-security-policy" content="default-src * 'unsafe-inline'">
+  <title>Averin Timur</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Averin Timur">
+  <meta name="description" content="It's my site.It works with Django(Python framework), HTML/CSS, JavaScript/jQuery.">
+  <meta name="keywords" content="Django(Python framework), HTML/CSS, JavaScript/jQuery">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-language" content="ru-RU">
+  <meta http-equiv="content-type" content="text/html">
+  <meta http-equiv="content-security-policy" content="default-src * 'unsafe-inline'">
+  <link rel="icon" type="image/png" href="../media/img/Logo.png">
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/Contact.css' %}">
 </head>
 <body>
-    <div id="Top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" id="MenuOpenBotton" onclick="OpenMenu()">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-        </svg>
-        <p id="Title">Chat</p>
-    </div>
-    <form id="Main" method="post">{% csrf_token %}
-        <input id="Name" type="text" required mozactionhint="next" value="Name" onfocus="DelText(this.id)" onblur="TextWrite(this.id)" name="name">
-        <input id="Contact" type="text" required mozactionhint="go" value="Contact" onfocus="DelText(this.id)" onblur="TextWrite(this.id)" name="contact">
-        <textarea id="Text" required mozactionhint="search" value="Massage" name="text"></textarea>
-        <input type="submit" id="Submit" required value="submit">
-    </form>
-    <div id="Menu">
-        <img src="/media/img/x.svg" id="Menu-Close" onclick="CloseMenu()">
-        <a class="Menu-Bottom" href="https://t.me/AverinTimur" id="Telegram" title="Telegram"></a>
-        <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite.git" id="Git-Bottom" title="Git"></a>
-        <a class="Menu-Bottom" href="/" id="MainPage" title="Main Page"><p>MAIN</p></a>
-    </div>
-    <div id="MenuOff" onmouseover="CloseMenu()" class="a-all" style="display: none; z-index: 5;"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{% static "JS/Contact.js" %}"></script>
+  <div id="top">
+    <svg id="menu_open_button" class="bi bi-list" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" onclick="open_menu()">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+    </svg>
+    <p id="title">Chat</p>
+  </div>
+  <form id="main" method="post">{% csrf_token %}
+    <input id="name" name="name" type="text" value="Name" required onfocus="del_text(this.id)" onblur="write_text(this.id)">
+    <input id="contact" name="contact" type="text" value="Contact" onfocus="del_text(this.id)" onblur="write_text(this.id)">
+    <textarea id="text" name="text" required></textarea>
+    <input type="submit" id="submit" value="submit" required>
+  </form>
+  <div id="menu">
+    <img id="menu_close_button" src="/media/img/x.svg" alt='close menu' onclick="close_menu()">
+    <a id="telegram" class="menu_button" href="https://t.me/AverinTimur" title="Telegram"></a>
+    <a id="git_button" class="menu_button" href="https://github.com/AverinTimur/MySite.git" title="GitHub"></a>
+    <a id="main_page_link" class="menu_button" href="/" title="Main Page"><p>MAIN</p></a>
+  </div>
+  <div id="menu_close_area" class="all_size" onmouseover="close_menu()"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{% static "JS/Contact.js" %}"></script>
 </body>
 </html>

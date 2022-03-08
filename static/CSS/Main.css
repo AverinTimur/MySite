@@ -1,426 +1,481 @@
-/*
-Prefixed by https://autoprefixer.github.io
-*/
+/* Prefixed by https://autoprefixer.github.io */
+
+/* Fonts */
+
 @font-face {
-    src: url("/static/font/MomcakeBold-WyonA.otf");
+    src: url(/static/font/MomcakeBold-WyonA.otf);
     font-family: MomcakeBold-WyonA;
 }
 @font-face {
-    src: url("/static/font/Oswald-Regular.ttf");
+    src: url(/static/font/Oswald-Regular.ttf);
     font-family: Oswald-SemiBold;
 }
-@-webkit-keyframes Prodjects_ToRight2{
-    0%{left: 0;}
-    100%{left: -100%;}
+
+/* Animations */
+
+@-webkit-keyframes work_main_to_right {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
 }
-@keyframes Prodjects_ToRight2{
-    0%{left: 0;}
-    100%{left: -100%;}
+@keyframes work_main_to_right {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
 }
-@-webkit-keyframes Prodjects_ToRight3{
-    0%{left: 100%;}
-    100%{left: 0;}
+@-webkit-keyframes work_left_to_right {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
 }
-@keyframes Prodjects_ToRight3{
-    0%{left: 100%;}
-    100%{left: 0;}
+@keyframes work_left_to_right {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
 }
-@-webkit-keyframes Prodjects_ToLeft1{
-    0%{left: -100%;}
-    100%{left: 0;}
+@-webkit-keyframes work_left_to_left {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
 }
-@keyframes Prodjects_ToLeft1{
-    0%{left: -100%;}
-    100%{left: 0;}
+@keyframes work_left_to_left {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
 }
-@-webkit-keyframes Prodjects_ToLeft2{
-    0%{left: 0;}
-    100%{left: 100%;}
+@-webkit-keyframes work_main_to_left {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
 }
-@keyframes Prodjects_ToLeft2{
-    0%{left: 0;}
-    100%{left: 100%;}
+@keyframes work_main_to_left {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
 }
-::-webkit-scrollbar{
+@-webkit-keyframes skill_on {
+    0%{
+        height: 0;
+        display: none;
+    }
+    100%{
+        height: 100%;
+        display: inline-block;
+    }
+}
+@keyframes skill_on {
+    0%{
+        height: 0;
+        display: none;
+    }
+    100%{
+        height: 100%;
+        display: inline-block;
+    }
+}
+@-webkit-keyframes skill_off {
+    0%{
+        height: 100%;
+        top: 0;
+    }
+    100%{
+        height: 0;
+        top: 100%;
+    }
+}
+@keyframes skill_off {
+    0%{
+        height: 100%;
+        top: 0;
+    }
+    100%{
+        height: 0;
+        top: 100%;
+    }
+}
+
+/* Main features */
+
+::-webkit-scrollbar {
     display: none;
 }
-*{
+* {
     margin: 0;
     padding: 0;
+    border: none;
+    background: none center no-repeat;
+    background-size: 100%;
     line-height: 100%;
+    font-family: MomcakeBold-WyonA, sans-serif;
 }
-p{
-    position: absolute;
-}
-body,html{
+body,
+html {
     width: 100%;
     height: 100%;
-    padding: 0;
+    background-color: white;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: white;
     scrollbar-width: none;
 }
-.a-all{
+.all_size {
+    position: absolute;
     height: 100%;
     width: 100%;
-    position: absolute;
     z-index: 10;
     cursor: pointer;
 }
-.blur{
-    background-color: white;
-    opacity: 0.5;
-    -webkit-filter: blur();
-            filter: blur();
-}
-#Top{
-    line-height: 0;
+
+/* Title */
+
+#top {
+    position: relative;
     width: 100%;
     height: 15vw;
-    background-color: black;
-    position: relative;
     padding: 3vw 0;
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+    background-color: black;
 }
-#Main{
-    width: 100%;
-    background: white;
+#A,
+#T {
     position: relative;
-}
-#logo-a{
     width: 20vw;
     height: 100%;
-    position: relative;
     display: inline-block;
+}
+#A {
     left: 12.5vw;
 }
-#Logo-a-line1{
-    width: 100%;
-    height: 100%;
+.line {
+    background-color: white;
+}
+#A_line1 {
     position: absolute;
+    left: 2.9%;
     shape-outside: polygon(50% 0 ,50% 29%,78% 133%,90% 133%);
     -webkit-clip-path: polygon(50% 0 ,50% 29%,78% 133%,90% 133%);
             clip-path: polygon(50% 0 ,50% 29%,78% 133%,90% 133%);
-    background-color: white;
-    left: 2.9%;
 }
-#Logo-a-line2{
-    width: 100%;
-    height: 100%;
+#A_line2 {
     position: absolute;
     shape-outside: polygon(50% 0 ,50% 29%,22% 133%,10% 133%);
     -webkit-clip-path: polygon(50% 0 ,50% 29%,22% 133%,10% 133%);
             clip-path: polygon(50% 0 ,50% 29%,22% 133%,10% 133%);
-    background-color: white;
     left: -2.9%;
 }
-#Logo-a-line3{
-    width: 100%;
-    height: 100%;
+#A_line3 {
     position: absolute;
     shape-outside: polygon(42% 58%,39% 68%,61% 68%,58% 58%);
     -webkit-clip-path: polygon(42% 58%,39% 68%,61% 68%,58% 58%);
             clip-path: polygon(42% 58%,39% 68%,61% 68%,58% 58%);
-    background-color: white;
 }
-#Top-text-verin{
+#verin {
     position: relative;
-    display: inline-block;
     left: 8.5vw;
+    display: inline-block;
     color: white;
     font-size: 12vw;
-    font-family: MomcakeBold-WyonA;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
 }
-#Top-text-imur{
-    position: relative;
-    display: inline-block;
-    right: 5.5vw;
-    color: white;
-    font-size: 12vw;
-    font-family: MomcakeBold-WyonA;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-}
-#logo-t{
-    width: 20vw;
-    height: 100%;
-    position: relative;
-    display: inline-block;
+#T {
     left: 1.5vw;
 }
-#Logo-t-line1{
-    width: 100%;
-    height: 100%;
+#T_line1 {
     position: absolute;
-    background-color: white;
     shape-outside: polygon(0 0,100% 0,50% 10%);
     -webkit-clip-path: polygon(0 0,100% 0,50% 10%);
             clip-path: polygon(0 0,100% 0,50% 10%);
 }
-#Logo-t-line2{
-    width: 100%;
-    height: 100%;
+#T_line2 {
     position: absolute;
-    background-color: white;
     shape-outside: polygon(40% 10%,50% 15%,60% 10%,50% 100%);
     -webkit-clip-path: polygon(40% 10%,50% 15%,60% 10%,50% 100%);
         clip-path: polygon(40% 10%,50% 15%,60% 10%,50% 100%);
 }
-#Logo-t-line3{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    top:-2.7cm;
-    left: 20%;
-}
-#Main-Text-Works{
-    font-family: MomcakeBold-WyonA;
+#imur {
     position: relative;
+    right: 5.5vw;
+    display: inline-block;
+    color: white;
+    font-size: 12vw;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+/* Main */
+
+#main {
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+/* Skills */
+
+#skills_text {
+    position: relative;
+    height: 11vh;
+    margin-top: 1vh;
     font-size: 10vh;
     text-align: center;
-    height: 11vh;
     line-height: 80%;
     font-weight: 400;
-    margin-top: 1vh;
 }
-#Top-Text{
-    height: 100%;
+#skills {
     width: 100%;
 }
-#Works{
-    width: 100%;
-}
-.Work,.onWork{
+.skill,
+.active_skill {
+    position: relative;
     height: 8vh;
     width: 20%;
     margin-left: 3.7%;
-    display: inline-block;
     border-radius: 10mm;
-    position: relative;
+    display: inline-block;
     background-color: black;
     z-index: 1;
 }
-.onWork{
+.active_skill {
     color: black;
 }
-.Work{
+.skill {
     color: white;
 }
-.Work::after{
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    -webkit-animation: WorkOut;
-            animation: WorkOut;
-    -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
-    background-color: white;
+.skill::after {
+    position: absolute;
     width: 100%;
     height: 0;
-    content:"";
-    position: absolute;
-
-}
-.onWork::after{
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    -webkit-animation: WorkOn;
-            animation: WorkOn;
+    content: "";
+    background-color: white;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-animation: skill_off;
+            animation: skill_off;
     -webkit-animation-duration: 0.3s;
             animation-duration: 0.3s;
-    background-color: white;
+}
+.active_skill::after {
+    position: absolute;
     width: 100%;
     height: 100%;
+    background-color: white;
     content:"";
-    position: absolute;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation: skill_on;
+            animation: skill_on;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
 
 }
-@-webkit-keyframes WorkOn {
-    0%{
-        height: 0;
-        display: none;
-    }
-    100%{
-        height: 100%;
-        display: inline-block;
-    }
-}
-@keyframes WorkOn {
-    0%{
-        height: 0;
-        display: none;
-    }
-    100%{
-        height: 100%;
-        display: inline-block;
-    }
-}
-@-webkit-keyframes WorkOut {
-    0%{
-        height: 100%;
-        top: 0;
-    }
-    100%{
-        height: 0;
-        top: 100%;
-    }
-}
-@keyframes WorkOut {
-    0%{
-        height: 100%;
-        top: 0;
-    }
-    100%{
-        height: 0;
-        top: 100%;
-    }
-}
-#Work-Text{
-    line-height: 0;
+.skill_text {
     position: absolute;
+    top: calc(50%);
+    line-height: 0;
     text-align: center;
     font-size: 10mm;
-    height: 100%;
-    width: 100%;
-    top: calc(50%);
-    font-family: 'MomcakeBold-WyonA';
     z-index: 3;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
 }
-#Main-Text-Prodjects{
-    font-family: MomcakeBold-WyonA;
+
+/* Works */
+
+#works_text {
     position: relative;
-    font-size: 10vh;
-    text-align: center;
     height: 11vh;
+    text-align: center;
     line-height: 80%;
+    font-size: 10vh;
     font-weight: 400;
 }
-#Prodjects{
-    height: 54vw;
+#works {
     position: relative;
+    height: 54vw;
 }
-#Prodjects-ToLift,#Prodjects-ToRight{
+#works_left_button,
+#works_right_button {
+    position: absolute;
     height: 100%;
     width: 5.8%;
     display: inline-block;
-    position: absolute;
     z-index: 3;
 }
-#Prodjects-ToLift{
+#works_left_button {
     left: 0;
 }
-#Prodjects-ToRight{
+#works_right_button {
     right: 0;
 }
-.Prodjects-Change-Text{
+.works_change_text {
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 7.5mm);
     text-align: center;
     line-height: 0;
     font-size: 12vw;
-    font-family: 'MomcakeBold-WyonA';
     opacity: 0.1;
-    top: calc(50% - 7.5mm);
-    position: absolute;
-    width: 100%;
     cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
 }
-#Prodjects-List{
+#works_list {
+    position: absolute;
     height: 100%;
     width: 88.4%;
-    overflow: hidden;
     left: 5.8%;
-    position: absolute;
+    overflow: hidden;
 }
-.Prodject{
+.work {
+    position: absolute;
     height: 100%;
     width: 100%;
-    position: absolute;
-    overflow-x: hidden;
     display: inline-block;
+    overflow-x: hidden;
     -webkit-animation-duration: 0.4s;
             animation-duration: 0.4s;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
 }
-#Prodject1{
+#left_work {
     right: 100%;
 }
-#Prodject3{
+#right_work {
     left: 100%;
 }
-#Menu-Open{
+
+/* Footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 15%;
+    margin-top: 1%;
+    background-color: black;
+}
+.footer {
+    position: relative;
+    height: 50%;
+    display: block;
+    font-size: 4vh;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.footers {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+#left_footer_line {
+    left: 0;
+}
+#right_footer_line {
+    left: 50%;
+}
+
+/* Menu open button */
+
+#menu_open_button {
+    position: absolute;
     height: 30%;
     width: 7mm;
     top: 35%;
-    position: absolute;
     z-index: 7;
 }
-#Menu-Open-Text{
+#menu_open_text {
+    position: relative;
+    top: calc(50% - 2.2cm);
+    font-size: 7mm;
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
-    font-size: 7mm;
-    position: relative;
-    top: calc(50% - 2.2cm);
-    font-family: MomcakeBold-WyonA;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
 }
-#Menu{
+#phone_menu_open_button {
+    position: absolute;
+    height: 10vw;
+    width: 10vw;
+    top: calc(50% - 5vw);
+    display: none;
+    cursor: pointer;
+    fill: white;
+}
+
+/* Menu */
+
+#menu {
     position: fixed;
-    top: 0;
     height: 100%;
     width: 6cm;
+    top: 0;
     border-bottom-right-radius: 10mm;
     border-top-right-radius: 10mm;
-    z-index: 6;
     display: none;
+    z-index: 6;
     background-color: white;
     opacity: 0.95;
 }
-.Menu-Bottom{
+#menu_close_area {
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 5;
+}
+#menu_close_button {
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    display: none;
+    fill: black;
+}
+.menu_button {
+    position: relative;
     height: 4cm;
     width: 4cm;
-    background: black;
-    position: relative;
-    border-radius: 10mm;
     margin: 1cm;
+    border-radius: 10mm;
     display: block;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: black;
     cursor: pointer;
 }
-#MenuOpenBotton{
-    cursor: pointer;
-    height: 10vw;
-    width: 10vw;
-    position: absolute;
-    top: calc(50% - 5vw);
-    fill: white;
-    display: none;
-}
-#Telegram{
+#telegram {
     mask-image: url(/media/img/telegram.svg);
         -webkit-mask-image: url(/media/img/telegram.svg);
     mask-repeat: no-repeat;
@@ -428,112 +483,77 @@ body,html{
     mask-size: 100%;
         -webkit-mask-size: 100%;
 }
-#Git-Bottom{
-    background-image: url("/media/img/git.png");
+#git_button {
+    mask-image: url(/media/img/git.svg);
+        -webkit-mask-image: url(/media/img/git.svg);
+    mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+    mask-size: 100%;
+        -webkit-mask-size: 100%;
 }
-#LanguageBottom{
-    background-image: url("/media/img/RussianFlag.png");
-    background-repeat: no-repeat;
-    background-position: center;
+#language_change_button {
+    background-image: url(/media/img/RussianFlag.png);
     background-size: 94%;
 }
-footer{
-    background-color: black;
-    height: 15%;
-    position: relative;
-    width: 100%;
-    margin-top: 1%;
-}
-.Footer{
-    display: block;
-    line-height: 100%;
-    height: 33%;
-    font-size: 4vh;
-    text-decoration: none;
-    font-family: MomcakeBold-WyonA;
-    color: white;
-    text-align: center;
-    position: relative;
-}
-.Footers{
-    display: inline-block;
-    position: absolute;
-    width: 33.33%;
-    line-height: 0;
-    top: 0;
-    height: 100%;
-    vertical-align: top;
-}
-#Footers1{
-    left: 0;
-}
-#Footers2{
-    left: 33.33%;
-}
-#Footers3{
-    left: 66.66%;
-}
-#MenuOff{
-    position: fixed;
-    top: 0;
-}
-#Menu-Close{
-    position: absolute;
-    width: 4vh;
-    height: 4vh;
-    display: none;
-    fill: black;
-}
-#Chat p{
-    font-size: 2cm;
-    color: white;
-    font-family: 'MomcakeBold-WyonA';
-    text-align: center;
-    vertical-align: middle;
+#chat p {
     position: absolute;
     width: 100%;
     bottom: 25%;
+    font-size: 2cm;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
 }
-@media (max-device-width: 480px){
-    .Work,.onWork{
+
+@media (max-device-width: 480px) {
+
+    /* Skills */
+
+    .skill, .active_skill {
         width: 95%;
         height: 4cm;
         margin-left: 2.5%;
     }
-    .Menu-Bottom{
+    #skill_text {
+        font-size: 3cm;
+    }
+
+    /* Works */
+
+    #works_list {
+        width: 100%;
+        left: 0;
+    }
+    .works_change_text {
+        opacity: 0.6;
+    }
+
+    /* Menu open button */
+
+    #menu_open_button {
+        display: none;
+    }
+    #menu_open_text {
+        font-size: 8vw;
+    }
+    #phone_menu_open_button {
+        display: inline-block;
+    }
+
+    /* Menu */
+
+    #menu {
+        width: 40%;
+    }
+    #menu_close_button {
+        display: inline-block;
+    }
+    .menu_button{
         height: 26.66vw;
         width: 26.66vw;
         margin: 6.67vw;
     }
-    #Work-Text{
-    font-size: 3cm;
-}
-    #Menu-Open{
-        width: 8vw;
-    }
-    #Menu-Open-Text {
-        font-size: 8vw;
-    }
-    #Menu {
-        width: 40%;
-    }
-    #Menu-Close{
-        display: inline-block;
-    }
-    #Chat p{
+    #chat p {
         font-size: 14vw;
-    }
-    #MenuOpenBotton{
-        display: inline-block;
-    }
-    #Menu-Open{
-        display: none;
-    }
-    .Prodjects-Change-Text{
-        opacity: 0.6;
-    }
-    #Prodjects-List{
-        width: 100%;
-        left: 0;
     }
 }

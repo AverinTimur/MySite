@@ -1,142 +1,168 @@
-//functions
-function Russian(){
-    $("#LanguageBottom").css("background-image","url('media/img/UKFlag.png')");
-    $("#Main-Text-Prodjects").text("работы");
-    $("#Main-Text-Works").text("навыки");
-    $("#Chat p").text("ЧАТ");
-    $("#Main-Text-Prodjects").css("font-family","Oswald-SemiBold")
-    $("#Main-Text-Works").css("font-family","Oswald-SemiBold")
-    $("#Chat p").css("font-family","Oswald-SemiBold")
-    $("#LanguageBottom").attr("title","Сменить язык")
+// objects
+
+let language = navigator.language
+
+const skills_text = $("#skills_text");
+const work_text = $("#works_text");
+const left_work = $("#left_work");
+const right_work = $("#right_work");
+const main_work = $("#main_work");
+const menu = $("#menu");
+const menu_close_area = $("#menu_close_area");
+const menu_open_text = $("#menu_open_text");
+const chat_text = $("#chat p");
+const chat = $("#chat");
+const language_object = $("#language_change_button");
+
+// functions
+
+function Russian() {
+    language_object.css("background-image", "url('media/img/UKFlag.png')");
+    work_text.text("работы");
+    skills_text.text("навыки");
+    chat_text.text("ЧАТ");
+    work_text.css("font-family", "Oswald-SemiBold");
+    skills_text.css("font-family", "Oswald-SemiBold");
+    chat_text.css("font-family", "Oswald-SemiBold");
+    language_object.attr("title", "Сменить язык");
+    chat.attr("title", "Чат");
 }
-function English(){
-    $("#LanguageBottom").css("background-image","url('media/img/RussianFlag.png");
-    $("#Main-Text-Prodjects").text("Works");
-    $("#Main-Text-Works").text("Skills");
-    $("#Chat p").text("Chat");
-    $("#Main-Text-Prodjects").css("font-family","MomcakeBold-WyonA")
-    $("#Main-Text-Works").css("font-family","MomcakeBold-WyonA")
-    $("#Chat p").css("font-family","MomcakeBold-WyonA")
-    $("#LanguageBottom").attr("title","Change language")
+function English() {
+    language_object.css("background-image", "url('media/img/RussianFlag.png");
+    work_text.text("Works");
+    skills_text.text("Skills");
+    chat_text.text("Chat");
+    work_text.css("font-family", "MomcakeBold-WyonA");
+    skills_text.css("font-family", "MomcakeBold-WyonA");
+    chat_text.css("font-family", "MomcakeBold-WyonA");
+    language_object.attr("title", "Change language");
+    chat.attr("title", "Chat");
 }
-function LanguageChange(){
-    if ($("#LanguageBottom").css("background-image") == 'url("' +$(document).attr("URL") + 'media/img/RussianFlag.png")'){
-        Russian()
-    }else if ($("#LanguageBottom").css("background-image") == 'url("' +$(document).attr("URL") + 'media/img/UKFlag.png")'){
-        English()
+function change_language() {
+    if (language === 'ru') {
+        English();
+        language = 'en'
+    }
+    else {
+        Russian();
+        language = 'ru'
     }
 }
-function OpenMenu(){
-    $("#Menu").css("display","inline");
-    $("#Menu").animate({left: 0},300,"linear");
-    $("#MenuOff").css("display","inline")
-    $("#Menu-Open-Text").animate({opacity: 0},300,"linear");
-    setTimeout(function (){
-        $("#Menu-Open-Text").css("display","none");
+function open_menu() {
+    menu.css("display", "inline");
+    menu.animate({left: 0}, 300, "linear");
+    menu_close_area.css("display", "inline");
+    menu_open_text.animate({opacity: 0}, 300, "linear");
+    setTimeout(function() {
+        menu_open_text.css("display", "none");
+    },300);
+}
+function close_menu() {
+    menu_close_area.css("display", "none");
+    menu.animate({left: "-6cm"}, 300, "linear");
+    menu_open_text.animate({opacity: 1}, 300, "linear");
+    setTimeout(function() {
+        menu_open_text.css("display", "block");
+        menu.css("display", "none");
     },300)
 }
-function CloseMenu(){
-    $("#MenuOff").css("display","none");
-    $("#Menu").animate({left: "-6cm"},300,"linear");
-    $("#Menu-Open-Text").animate({opacity: 1},300,"linear");
-    setTimeout(function (){
-        $("#Menu-Open-Text").css("display","block");
-        $("#Menu").css("display","none");
-    },300)
+function skill_on_hover(id) {
+    $("#" + id).attr("class", "active_skill");
 }
-function AnimationHover(id){
-    $("#" + id).attr("class","onWork");
+function skill_out_hover(id) {
+    $("#" + id).attr("class", "skill");
 }
-function AnimationUnHover(id){
-    $("#" + id).attr("class","Work");
-}
-function Prodjects_ToRight(){
-    if ($("#Prodject2").css("animationName") != "Prodjects_ToRight2") {
-        if (Prodject_1_Num == Prodjects.length - 1) {
-            Prodject_1_Num = 0;
+function work_to_right() {
+    if (main_work.css("animationName") !== "work_main_to_right") {
+        if (left_work_num === works.length - 1) {
+            left_work_num = 0;
         } else {
-            Prodject_1_Num++;
+            left_work_num++;
         }
-        if (Prodject_2_Num == Prodjects.length - 1) {
-            Prodject_2_Num = 0;
+        if (main_work_num === works.length - 1) {
+            main_work_num = 0;
         } else {
-            Prodject_2_Num++;
+            main_work_num++;
         }
-        if (Prodject_3_Num == Prodjects.length - 1) {
-            Prodject_3_Num = 0;
+        if (right_work_num === works.length - 1) {
+            right_work_num = 0;
         } else {
-            Prodject_3_Num++;
+            right_work_num++;
         }
-        $("#Prodject2").css("animation-name","Prodjects_ToRight2");
-        $("#Prodject3").css("animation-name","Prodjects_ToRight3");
-        setTimeout(function () {
-            $("#Prodject1").css("background-image","url('" + ProdjectList[Prodjects[Prodject_1_Num]] + "')");
-            $("#Prodject2").css("background-image","url('" + ProdjectList[Prodjects[Prodject_2_Num]] + "')");
-            $("#Prodject2").attr("href",ProdjectList[Prodjects[Prodject_2_Num]]);
-            $("#Prodject3").css("background-image","url('" + ProdjectList[Prodjects[Prodject_3_Num]] + "')");
-            $("#Prodject2").css("animation-name","");
-            $("#Prodject3").css("animation-name","");
-        }, 390)
+        main_work.css("animation-name", "work_main_to_right");
+        right_work.css("animation-name", "work_left_to_right");
+        setTimeout(function() {
+            left_work.css("background-image", "url('" + work_list[works[left_work_num]] + "')");
+            main_work.css("background-image", "url('" + work_list[works[main_work_num]] + "')");
+            main_work.attr("href", work_list[works[main_work_num]]);
+            right_work.css("background-image", "url('" + work_list[works[right_work_num]] + "')");
+            main_work.css("animation-name", "");
+            right_work.css("animation-name", "");
+        }, 390);
     }
 }
-function Prodjects_ToLift(){
-    if ($("#Prodject2").css("animationName") != "Prodjects_ToLeft2") {
-        if (Prodject_1_Num == 0){
-            Prodject_1_Num = Prodjects.length - 1;
+function work_to_left() {
+    if (main_work.css("animationName") !== "work_main_to_left") {
+        if (left_work_num === 0) {
+            left_work_num = works.length - 1;
         } else {
-            Prodject_1_Num--;
+            left_work_num--;
         }
-        if (Prodject_2_Num == 0) {
-            Prodject_2_Num = Prodjects.length - 1;
+        if (main_work_num === 0) {
+            main_work_num = works.length - 1;
         } else {
-            Prodject_2_Num--;
+            main_work_num--;
         }
-        if (Prodject_3_Num == 0) {
-            Prodject_3_Num = Prodjects.length - 1;
+        if (right_work_num === 0) {
+            right_work_num = works.length - 1;
         } else {
-            Prodject_3_Num--;
+            right_work_num--;
         }
-        $("#Prodject1").css("animation-name","Prodjects_ToLeft1");
-        $("#Prodject2").css("animation-name","Prodjects_ToLeft2");
-        setTimeout(function () {
-            $("#Prodject1").css("background-image","url('" + ProdjectList[Prodjects[Prodject_1_Num]] + "')");
-            $("#Prodject2").css("background-image","url('" + ProdjectList[Prodjects[Prodject_2_Num]] + "')");
-            $("#Prodject2").attr("href",ProdjectList[Prodjects[Prodject_2_Num]]);
-            $("#Prodject3").css("background-image","url('" + ProdjectList[Prodjects[Prodject_3_Num]] + "')");
-            $("#Prodject1").css("animation-name","");
-            $("#Prodject2").css("animation-name","");
-        }, 390)
+        left_work.css("animation-name", "work_left_to_left");
+        main_work.css("animation-name", "work_main_to_left");
+        setTimeout(function() {
+            left_work.css("background-image", "url('" + work_list[works[left_work_num]] + "')");
+            main_work.css("background-image", "url('" + work_list[works[main_work_num]] + "')");
+            main_work.attr("href", work_list[works[main_work_num]]);
+            $("#right_work").css("background-image", "url('" + work_list[works[right_work_num]] + "')");
+            left_work.css("animation-name", "");
+            main_work.css("animation-name", "");
+        }, 390);
     }
 }
 
-//start
-if(navigator.language == "ru"){
-    Russian()
+// start
+
+if(language === "ru") {
+    Russian();
 }
-ProdjectList = {};
-Prodjects = Array();
+let work_list = Array();
+let works = Array();
 $.ajax({
     method : "Post",
-    url: $(document).attr("URL") + "firstAJAX/",
+    url: $(document).attr("URL") + "StartAJAX/",
     contentType: "json",
     headers: {"X-CSRFToken": $('[name=csrfmiddlewaretoken]').attr("value")},
-    success: function(data){
-        for (const i in data){
-            Prodjects.push(i)
-            ProdjectList[i] = data[i];
+    success: function(data) {
+        console.log(data)
+        for (const i in data) {
+            works.push(i);
+            work_list[i] = data[i];
         }
-        Prodject_1_Num = Prodjects.length - 1;
-        Prodject_2_Num = 0;
-        if(Prodjects.length - 1>0){
-            Prodject_3_Num = 1;
+        left_work_num = works.length - 1;
+        main_work_num = 0;
+        if(works.length - 1>0) {
+            right_work_num = 1;
         }
-        else{
-            Prodject_3_Num = 0;
+        else {
+            right_work_num = 0;
         }
-        $("#Prodject1").css("background-image","url('" + ProdjectList[Prodjects[Prodject_1_Num]] + "')");
-        $("#Prodject2").css("background-image","url('" + ProdjectList[Prodjects[Prodject_2_Num]] + "')");
-        $("#Prodject2").attr("href",ProdjectList[Prodjects[Prodject_2_Num]]);
-        $("#Prodject3").css("background-image","url('" + ProdjectList[Prodjects[Prodject_3_Num]] + "')");
-        setInterval(function (){Prodjects_ToRight()},10000);
+        left_work.css("background-image", "url('" + work_list[works[left_work_num]] + "')");
+        main_work.css("background-image", "url('" + work_list[works[main_work_num]] + "')");
+        main_work.attr("href", work_list[works[main_work_num]]);
+        right_work.css("background-image", "url('" + work_list[works[right_work_num]] + "')");
+        setInterval(function() {
+            work_to_right();
+        },10000);
     },
 });

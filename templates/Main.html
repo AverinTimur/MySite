@@ -3,90 +3,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Averin Timur</title>
-    <link rel="icon" type="image/png" href="media/img/Logo.png">
-    <link rel="stylesheet" type="text/css" href="{% static 'CSS/Main.css' %}">
-    <meta name="author" content="Averin Timur">
-    <meta name="description" content="It's my site.It work with Django(Python framework), HTML/CSS, JavaScript/jQuery.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="content-language" content="ru-RU">
-    <meta http-equiv="content-type" content="text/html">
-    <meta name="keywords" content="Django(Python framework), HTML/CSS, JavaScript/jQuery">
-    <meta http-equiv="content-security-policy" content="default-src * 'unsafe-inline'">
+  <title>Averin Timur</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Averin Timur">
+  <meta name="description" content="It's my site. It works with Django(Python framework), HTML/CSS, JavaScript/jQuery.">
+  <meta name="keywords" content="Django(Python framework), HTML/CSS, JavaScript/jQuery">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-language" content="ru-RU">
+  <meta http-equiv="content-type" content="text/html">
+  <meta http-equiv="content-security-policy" content="default-src * 'unsafe-inline'">
+  <link rel="icon" type="image/png" href="../media/img/Logo.png">
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/Main.css' %}">
 </head>
 <body>
-    <div id="Top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" id="MenuOpenBotton" onclick="OpenMenu()">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-        </svg>
-        <div id="logo-a">
-            <div id="Logo-a-line1"></div>
-            <div id="Logo-a-line2"></div>
-            <div id="Logo-a-line3"></div>
-        </div>
-        <p id="Top-text-verin">verin</p>
-        <div id="logo-t">
-            <div id="Logo-t-line1"></div>
-            <div id="Logo-t-line2"></div>
-        </div>
-        <p id="Top-text-imur">imur</p>
+  <div id="top">
+    <svg id="phone_menu_open_button" class="bi bi-list" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" onclick="open_menu()">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+    </svg>
+    <div id="A">
+      <div id="A_line1" class="line all_size"></div>
+      <div id="A_line2" class="line all_size"></div>
+      <div id="A_line3" class="line all_size"></div>
     </div>
-    <div id="Main">
-        <h1 id="Main-Text-Works">Skills</h1>
-        <div id="Works">
-            {% for _ , name in WorkList.items %}
-            <div class="Work" id="Work-{{ name }}" onmouseover="AnimationHover('Work-{{ name }}')" onmouseout="AnimationUnHover('Work-{{ name }}')">
-                <p id="Work-Text">{{ name }}</p>
-                <a class="a-all" href="work/{{ name }}" title="{{ name }}"></a>
-            </div>
-            {% endfor %}
-        </div>
-        <h1 id="Main-Text-Prodjects">Works</h1>
-        <div id="Prodjects">
-            <div id="Prodjects-ToLift" >
-                <div class="Prodjects-Change-Text" onclick="Prodjects_ToLift()"><</div>
-            </div>
-            <div id="Prodjects-List">
-                <div id="Prodject1" class="Prodject"></div>
-                <a href="" id="Prodject2" class="Prodject" title="Example of my work"></a>
-                <div id="Prodject3" class="Prodject"></div>
-            </div>
-            <div id="Prodjects-ToRight">
-                <div class="Prodjects-Change-Text" onclick="Prodjects_ToRight()">></div>
-            </div>
-        </div>
+    <p id="verin">verin</p>
+    <div id="T">
+      <div id="T_line1" class="line all_size"></div>
+      <div id="T_line2" class="line all_size"></div>
     </div>
-    <footer>
-        <div class="Footers" id="Footers1">
-            <a class="Footer" href="https://kwork.ru/user/averintimur">Kwork</a>
-            <a class="Footer" href="https://www.fiverr.com/averintimur">Fiverr</a>
-            <a class="Footer" href="https://t.me/AverinTimur">Telegram</a>
-        </div>
-        <div class="Footers" id="Footers2">
-            <a class="Footer" href="https://github.com/AverinTimur/MySite.git">GitHub</a>
-            <a class="Footer" href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a>
-            <a class="Footer" href="https://en.wikipedia.org/wiki/Django_(web_framework)">Django</a>
-        </div>
-        <div class="Footers" id="Footers3">
-            <a class="Footer" href="https://en.wikipedia.org/wiki/HTML">HTML</a>
-            <a class="Footer" href="https://en.wikipedia.org/wiki/CSS">CSS</a>
-            <a class="Footer" href="https://en.wikipedia.org/wiki/JavaScript">JS</a>
-        </div>
-        </footer>
-    <div id="Menu-Open" onmouseover="OpenMenu()">
-        <p id="Menu-Open-Text">menu</p>
+    <p id="imur">imur</p>
+  </div>
+  <div id="main">
+    <h1 id="skills_text">Skills</h1>
+    <div id="skills">
+      {% for _ , name in skills_list.items %}
+      <div id="skill-{{ name }}" class="skill" onmouseover="skill_on_hover('skill-{{ name }}')" onmouseout="skill_out_hover('skill-{{ name }}')">
+      <p class="skill_text all_size">{{ name }}</p>
+      <a class="all_size" href="skill/{{ name }}" title="{{ name }}"></a>
+      </div>
+      {% endfor %}
     </div>
-    <div id="Menu">
-        <img src="/media/img/x.svg" id="Menu-Close" onclick="CloseMenu()">
-        <a class="Menu-Bottom" href="https://t.me/AverinTimur" id="Telegram" title="Telegram"></a>
-        <a class="Menu-Bottom" href="https://github.com/AverinTimur/MySite.git" id="Git-Bottom" title="Git"></a>
-        <a class='Menu-Bottom' href="{% url 'contact' %}" id="Chat"><p>CHAT</p></a>
-        <bottom class="Menu-Bottom" id="LanguageBottom" onclick="LanguageChange()" title="Change language"></bottom>
+    <h1 id="works_text">Works</h1>
+    <div id="works">
+      <div id="works_left_button">
+        <div class="works_change_text" onclick="work_to_left()"><</div>
+      </div>
+      <div id="works_list">
+        <div id="left_work" class="work"></div>
+        <a id="main_work" class="work" href="" title="Example of my work"></a>
+        <div id="right_work" class="work"></div>
+      </div>
+      <div id="works_right_button">
+        <div class="works_change_text" onclick="work_to_right()">></div>
+      </div>
     </div>
-    <div id="MenuOff" onmouseover="CloseMenu()" class="a-all" style="display: none; z-index: 5;"></div>
-    {% csrf_token %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{% static "JS/Main.js" %}"></script>
+  </div>
+  <footer>
+    <div id="left_footer_line" class="footers">
+      <a class="footer" href="https://kwork.ru/user/averintimur">Kwork</a>
+      <a class="footer" href="https://www.fiverr.com/averintimur">Fiverr</a>
+    </div>
+    <div id="right_footer_line" class="footers">
+      <a class="footer" href="https://t.me/AverinTimur">Telegram</a>
+      <a class="footer" href="https://github.com/AverinTimur/MySite.git">GitHub</a>
+    </div>
+  </footer>
+  <div id="menu_open_button" onmouseover="open_menu()">
+    <p id="menu_open_text">menu</p>
+  </div>
+  <div id="menu">
+    <img id="menu_close_button" src="/media/img/x.svg" alt='close menu' onclick="close_menu()">
+    <a id="telegram" class="menu_button" href="https://t.me/AverinTimur" title="Telegram"></a>
+    <a id="git_button" class="menu_button" href="https://github.com/AverinTimur/MySite.git" title="GitHub"></a>
+    <button id="language_change_button" class="menu_button" title="Change language" onclick="change_language()"></button>
+    <a id="chat" class='menu_button' href="{% url 'contact' %}" title="Сhat"><p>CHAT</p></a>
+  </div>
+  <div id="menu_close_area" class="all_size" onmouseover="close_menu()"></div>
+  {% csrf_token %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{% static "JS/Main.js" %}"></script>
 </body>
 </html>

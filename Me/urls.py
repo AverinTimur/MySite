@@ -6,8 +6,8 @@ from app import views
 
 urlpatterns = [
     path("", views.run, name="run"),
-    path("firstAJAX/", views.firstAJAX, name="firstAJAX"),
-    path("work/<url>/", views.work),
+    path("StartAJAX/", views.start_ajax, name="start_ajax"),
+    path("skill/<url>/", views.work),
     path("admin/", admin.site.urls),
     path("contact", views.contact, name='contact')
 ]

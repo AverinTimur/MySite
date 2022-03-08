@@ -1,10 +1,10 @@
 from django.contrib import admin
 from .models import *
 
-@admin.register(Works)
+@admin.register(Skills)
 class WorksList(admin.ModelAdmin):
     pass
 
-@admin.register(Prodjects)
+@admin.register(Works)
 class ProdjectsList(admin.ModelAdmin):
     pass
