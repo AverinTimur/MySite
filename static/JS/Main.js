@@ -41,11 +41,11 @@ function English() {
 function change_language() {
     if (language === 'ru') {
         English();
-        language = 'en'
+        language = 'en';
     }
     else {
         Russian();
-        language = 'ru'
+        language = 'ru';
     }
 }
 function open_menu() {
@@ -74,21 +74,10 @@ function skill_out_hover(id) {
 }
 function work_to_right() {
     if (main_work.css("animationName") !== "work_main_to_right") {
-        if (left_work_num === works.length - 1) {
-            left_work_num = 0;
-        } else {
-            left_work_num++;
-        }
-        if (main_work_num === works.length - 1) {
-            main_work_num = 0;
-        } else {
-            main_work_num++;
-        }
-        if (right_work_num === works.length - 1) {
-            right_work_num = 0;
-        } else {
-            right_work_num++;
-        }
+        left_work_num === works.length - 1 ? left_work_num = 0 : left_work_num++;
+        main_work_num === works.length - 1 ? main_work_num = 0 : main_work_num++;
+        right_work_num === works.length - 1 ? right_work_num = 0 : right_work_num++;
+
         main_work.css("animation-name", "work_main_to_right");
         right_work.css("animation-name", "work_left_to_right");
         setTimeout(function() {
@@ -103,28 +92,17 @@ function work_to_right() {
 }
 function work_to_left() {
     if (main_work.css("animationName") !== "work_main_to_left") {
-        if (left_work_num === 0) {
-            left_work_num = works.length - 1;
-        } else {
-            left_work_num--;
-        }
-        if (main_work_num === 0) {
-            main_work_num = works.length - 1;
-        } else {
-            main_work_num--;
-        }
-        if (right_work_num === 0) {
-            right_work_num = works.length - 1;
-        } else {
-            right_work_num--;
-        }
+        left_work_num === 0 ? left_work_num = works.length - 1 : left_work_num--;
+        main_work_num === 0 ? main_work_num = works.length - 1 : main_work_num--;
+        right_work_num === 0 ? right_work_num = works.length - 1 : right_work_num--;
+
         left_work.css("animation-name", "work_left_to_left");
         main_work.css("animation-name", "work_main_to_left");
-        setTimeout(function() {
+        setTimeout(function () {
             left_work.css("background-image", "url('" + work_list[works[left_work_num]] + "')");
             main_work.css("background-image", "url('" + work_list[works[main_work_num]] + "')");
             main_work.attr("href", work_list[works[main_work_num]]);
-            $("#right_work").css("background-image", "url('" + work_list[works[right_work_num]] + "')");
+            right_work.css("background-image", "url('" + work_list[works[right_work_num]] + "')");
             left_work.css("animation-name", "");
             main_work.css("animation-name", "");
         }, 390);
@@ -136,6 +114,7 @@ function work_to_left() {
 if(language === "ru") {
     Russian();
 }
+
 let work_list = Array();
 let works = Array();
 $.ajax({
@@ -144,19 +123,16 @@ $.ajax({
     contentType: "json",
     headers: {"X-CSRFToken": $('[name=csrfmiddlewaretoken]').attr("value")},
     success: function(data) {
-        console.log(data)
         for (const i in data) {
             works.push(i);
             work_list[i] = data[i];
         }
+
         left_work_num = works.length - 1;
         main_work_num = 0;
-        if(works.length - 1>0) {
-            right_work_num = 1;
-        }
-        else {
-            right_work_num = 0;
-        }
+
+        works.length - 1 > 0 ? right_work_num = 1 : right_work_num = 0;
+
         left_work.css("background-image", "url('" + work_list[works[left_work_num]] + "')");
         main_work.css("background-image", "url('" + work_list[works[main_work_num]] + "')");
         main_work.attr("href", work_list[works[main_work_num]]);

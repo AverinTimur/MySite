@@ -339,7 +339,7 @@ html {
 .works_change_text {
     position: absolute;
     width: 100%;
-    top: calc(50% - 7.5mm);
+    top: calc(50% - 3vw);
     text-align: center;
     line-height: 0;
     font-size: 12vw;

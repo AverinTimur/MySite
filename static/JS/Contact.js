@@ -7,6 +7,7 @@ const menu_close_area = $("#menu_close_area");
 const title = $('#title')
 const contact = $('#contact')
 const name = $('#name')
+const submit = $('#submit')
 
 let del_list = new Map();
 
@@ -19,17 +20,17 @@ function del_text(obj) {
     }
 }
 function open_menu() {
-    menu.css("display","inline");
-    menu.animate({left: 0},300,"linear");
+    menu.css("display", "inline");
+    menu.animate({left: 0}, 300, "linear");
     setTimeout(function() {
-        menu_close_area.css("display","inline");
+        menu_close_area.css("display", "inline");
     },300);
 }
 function close_menu() {
-    menu_close_area.css("display","none");
-    menu.animate({left: "-6cm"},300,"linear");
+    menu_close_area.css("display", "none");
+    menu.animate({left: "-6cm"}, 300, "linear");
     setTimeout(function() {
-        menu.css("display","none");
+        menu.css("display", "none");
     },300);
 }
 function write_text(obj) {
@@ -60,9 +61,9 @@ function write_text(obj) {
 }
 if(language === 'ru') {
     title.text('ЧАТ');
-    title.css("font-family","Oswald-SemiBold");
+    title.css("font-family", "Oswald-SemiBold");
     name.val("Имя");
     contact.val("Контакты(email, telegram, сайт)");
-    title.val("ОТПРАВИТЬ");
-    title.css("font-family","Oswald-SemiBold");
+    submit.val("ОТПРАВИТЬ");
+    submit.css("font-family", "Oswald-SemiBold");
 }

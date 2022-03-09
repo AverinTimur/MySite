@@ -5,9 +5,9 @@ let language = navigator.language;
 const menu = $("#menu");
 const menu_close_area = $("#menu_close_area");
 const menu_open_text = $("#menu_open_text");
-const chat_text = $("#chat p");
-const chat = $("#chat");
 const language_object = $("#language_change_button");
+const en = $("#En");
+const ru = $("#Ru");
 
 // functions
 
@@ -31,14 +31,14 @@ function close_menu() {
 }
 function Russian() {
     language_object.css("background-image","url('/media/img/UKFlag.png')");
-    $("#En").css("display","none");
-    $("#Ru").css("display","block");
+    en.css("display","none");
+    ru.css("display","block");
     language_object.attr("title","Сменить язык");
 }
 function English() {
     language_object.css("background-image","url('/media/img/RussianFlag.png");
-    $("#Ru").css("display","none");
-    $("#En").css("display","block");
+    ru.css("display","none");
+    en.css("display","block");
     language_object.attr("title","Change language");
 }
 function change_language() {
@@ -53,9 +53,4 @@ function change_language() {
 
 // start
 
-if(language === "ru") {
-    Russian()
-}
-else {
-    $("#Ru").css("display","none");
-}
+language === "ru" ? Russian() : ru.css("display","none");
