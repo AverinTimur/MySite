@@ -13,6 +13,7 @@ const menu_open_text = $("#menu_open_text");
 const chat_text = $("#chat p");
 const chat = $("#chat");
 const language_object = $("#language_change_button");
+changing = false;
 
 // functions
 
@@ -73,7 +74,8 @@ function skill_out_hover(id) {
     $("#" + id).attr("class", "skill");
 }
 function work_to_right() {
-    if (main_work.css("animationName") !== "work_main_to_right") {
+    if (main_work.css("animationName") !== "work_main_to_right" && !changing) {
+        changing = true;
         left_work_num === works.length - 1 ? left_work_num = 0 : left_work_num++;
         main_work_num === works.length - 1 ? main_work_num = 0 : main_work_num++;
         right_work_num === works.length - 1 ? right_work_num = 0 : right_work_num++;
@@ -87,11 +89,13 @@ function work_to_right() {
             right_work.css("background-image", "url('" + work_list[works[right_work_num]] + "')");
             main_work.css("animation-name", "");
             right_work.css("animation-name", "");
+            changing = false;
         }, 390);
     }
 }
 function work_to_left() {
-    if (main_work.css("animationName") !== "work_main_to_left") {
+    if (main_work.css("animationName") !== "work_main_to_left" && !changing) {
+        changing = true;
         left_work_num === 0 ? left_work_num = works.length - 1 : left_work_num--;
         main_work_num === 0 ? main_work_num = works.length - 1 : main_work_num--;
         right_work_num === 0 ? right_work_num = works.length - 1 : right_work_num--;
@@ -105,6 +109,7 @@ function work_to_left() {
             right_work.css("background-image", "url('" + work_list[works[right_work_num]] + "')");
             left_work.css("animation-name", "");
             main_work.css("animation-name", "");
+            changing = false;
         }, 390);
     }
 }

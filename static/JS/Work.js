@@ -30,16 +30,16 @@ function close_menu() {
     },300)
 }
 function Russian() {
-    language_object.css("background-image","url('/media/img/UKFlag.png')");
-    en.css("display","none");
-    ru.css("display","block");
-    language_object.attr("title","Сменить язык");
+    language_object.css("background-image", "url('/media/img/UKFlag.png')");
+    en.css("display", "none");
+    ru.css("display", "block");
+    language_object.attr("title", "Сменить язык");
 }
 function English() {
     language_object.css("background-image","url('/media/img/RussianFlag.png");
-    ru.css("display","none");
-    en.css("display","block");
-    language_object.attr("title","Change language");
+    ru.css("display", "none");
+    en.css("display", "block");
+    language_object.attr("title", "Change language");
 }
 function change_language() {
     if (language !== "ru") {
@@ -53,4 +53,19 @@ function change_language() {
 
 // start
 
-language === "ru" ? Russian() : ru.css("display","none");
+language === "ru" ? Russian() : ru.css("display", "none");
+
+setTimeout(function () {
+    $("h1").animate({
+        top: "0",
+    }, 500, "linear");
+    $("#top").animate({
+        height: "13vw",
+        zIndex: "1",
+    }, 500, "linear");
+    setTimeout(function () {
+        $("#menu_open_button").css("display", "inline-block");
+        $(".main").css("margin-top", "8vw");
+        $("#top").css("position", "relative");
+    }, 550);
+},1000);

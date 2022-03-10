@@ -46,18 +46,23 @@ html {
 /* Title */
 
 #top {
-    height: 15%;
+    position: fixed;
+    height: 100%;
     width: 100%;
+    z-index: 10;
 }
 h1 {
-    font-size: 13vh;
+    position: relative;
+    top: 43.5vh;
+    font-size: 13vw;
     text-align: center;
+    word-break: break-all;
 }
 
 /* Main */
 
 .main {
-    margin: 8vw 8vw 6% 8vw;
+    margin: 21vw 8vw 6% 8vw;
     font-size: 5vh;
     word-break: break-all;
 }
@@ -96,6 +101,7 @@ h1 {
     position: absolute;
     height: 30%;
     width: 7mm;
+    display: none;
     top: 35%;
     z-index: 7;
 }

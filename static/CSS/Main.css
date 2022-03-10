@@ -511,7 +511,7 @@ footer {
 
     .skill, .active_skill {
         width: 95%;
-        height: 4cm;
+        height: 10vh;
         margin-left: 2.5%;
     }
     #skill_text {
