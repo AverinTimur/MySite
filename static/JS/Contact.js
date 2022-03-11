@@ -4,10 +4,12 @@ const language = navigator.language;
 
 const menu = $("#menu");
 const menu_close_area = $("#menu_close_area");
-const title = $('#title')
-const contact = $('#contact')
-const name = $('#name')
-const submit = $('#submit')
+const title = $('#title');
+const contact = $('#contact');
+const name = $('#name');
+const submit = $('#submit');
+const main_page_text = $("#main_page_link p");
+const main_page = $("#main_page_link");
 
 let del_list = new Map();
 
@@ -61,9 +63,11 @@ function write_text(obj) {
 }
 if(language === 'ru') {
     title.text('ЧАТ');
-    title.css("font-family", "Oswald-SemiBold");
+    $("*").css("font-family", "RuFont");
+    main_page_text.css("font-family", "EngFont");
+    main_page.attr("title", "Главная страница");
     name.val("Имя");
     contact.val("Контакты(email, telegram, сайт)");
     submit.val("ОТПРАВИТЬ");
-    submit.css("font-family", "Oswald-SemiBold");
+    submit.css("font-family", "RuFont");
 }

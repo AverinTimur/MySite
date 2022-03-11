@@ -4,11 +4,15 @@
 
 @font-face {
     src: url(/static/font/MomcakeBold-WyonA.otf);
-    font-family: MomcakeBold-WyonA;
+    font-family: EngFont;
 }
 @font-face {
-    src: url(/static/font/Oswald-Regular.ttf);
-    font-family: Oswald-SemiBold;
+    src: url(/static/font/20953.ttf);
+    font-family: RuFont;
+}
+@font-face {
+    src: url(/static/font/Oswald-SemiBold.ttf);
+    font-family: SecondRuFont;
 }
 
 /* Animations */
@@ -130,7 +134,7 @@
     background: none center no-repeat;
     background-size: 100%;
     line-height: 100%;
-    font-family: MomcakeBold-WyonA, sans-serif;
+    font-family: EngFont, sans-serif;
 }
 body,
 html {

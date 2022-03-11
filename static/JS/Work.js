@@ -8,6 +8,9 @@ const menu_open_text = $("#menu_open_text");
 const language_object = $("#language_change_button");
 const en = $("#En");
 const ru = $("#Ru");
+const chat_text = $("#chat p");
+const chat = $("#chat");
+const main_page = $("#main_page_link");
 
 // functions
 
@@ -31,15 +34,23 @@ function close_menu() {
 }
 function Russian() {
     language_object.css("background-image", "url('/media/img/UKFlag.png')");
+    language_object.attr("title", "Сменить язык");
     en.css("display", "none");
     ru.css("display", "block");
-    language_object.attr("title", "Сменить язык");
+    chat_text.text("ЧАТ");
+    chat_text.css("font-family", "SecondRuFont");
+    chat.attr("title", "Чат");
+    main_page.attr("title", "Главная страница");
 }
 function English() {
     language_object.css("background-image","url('/media/img/RussianFlag.png");
+    language_object.attr("title", "Change language");
     ru.css("display", "none");
     en.css("display", "block");
-    language_object.attr("title", "Change language");
+    chat_text.text("Chat");
+    chat_text.css("font-family", "EngFont");
+    chat.attr("title", "Chat");
+    main_page.attr("title", "Main Page");
 }
 function change_language() {
     if (language !== "ru") {

@@ -24,7 +24,7 @@
   </div>
   <form id="main" method="post">{% csrf_token %}
     <input id="name" name="name" type="text" value="Name" required onfocus="del_text(this.id)" onblur="write_text(this.id)">
-    <input id="contact" name="contact" type="text" value="Contact" onfocus="del_text(this.id)" onblur="write_text(this.id)">
+    <input id="contact" name="contact" type="text" value="Contact(email, telegram, website)" onfocus="del_text(this.id)" onblur="write_text(this.id)">
     <textarea id="text" name="text" required></textarea>
     <input type="submit" id="submit" value="submit" required>
   </form>

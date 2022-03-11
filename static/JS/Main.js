@@ -22,9 +22,9 @@ function Russian() {
     work_text.text("работы");
     skills_text.text("навыки");
     chat_text.text("ЧАТ");
-    work_text.css("font-family", "Oswald-SemiBold");
-    skills_text.css("font-family", "Oswald-SemiBold");
-    chat_text.css("font-family", "Oswald-SemiBold");
+    work_text.css("font-family", "RuFont");
+    skills_text.css("font-family", "RuFont");
+    chat_text.css("font-family", "SecondRuFont");
     language_object.attr("title", "Сменить язык");
     chat.attr("title", "Чат");
 }
@@ -33,9 +33,9 @@ function English() {
     work_text.text("Works");
     skills_text.text("Skills");
     chat_text.text("Chat");
-    work_text.css("font-family", "MomcakeBold-WyonA");
-    skills_text.css("font-family", "MomcakeBold-WyonA");
-    chat_text.css("font-family", "MomcakeBold-WyonA");
+    work_text.css("font-family", "EngFont");
+    skills_text.css("font-family", "EngFont");
+    chat_text.css("font-family", "EngFont");
     language_object.attr("title", "Change language");
     chat.attr("title", "Chat");
 }
