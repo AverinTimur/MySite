@@ -79,4 +79,4 @@ setTimeout(function () {
         $(".main").css("margin-top", "8vw");
         $("#top").css("position", "relative");
     }, 550);
-},1000);
+}, 1000);

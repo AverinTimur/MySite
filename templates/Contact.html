@@ -14,14 +14,16 @@
   <meta http-equiv="content-security-policy" content="default-src * 'unsafe-inline'">
   <link rel="icon" type="image/png" href="../media/img/Logo.png">
   <link rel="stylesheet" type="text/css" href="{% static 'CSS/Contact.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
   <div id="top">
     <svg id="menu_open_button" class="bi bi-list" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" onclick="open_menu()">
       <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
     </svg>
-    <p id="title">Chat</p>
+    <p id="title"></p>
   </div>
+  <script src="{% static "JS/ChatStart.js" %}"></script>
   <form id="main" method="post">{% csrf_token %}
     <input id="name" name="name" type="text" value="Name" required onfocus="del_text(this.id)" onblur="write_text(this.id)">
     <input id="contact" name="contact" type="text" value="Contact(email, telegram, website)" onfocus="del_text(this.id)" onblur="write_text(this.id)">
@@ -35,7 +37,6 @@
     <a id="main_page_link" class="menu_button" href="/" title="Main Page"><p>MAIN</p></a>
   </div>
   <div id="menu_close_area" class="all_size" onmouseover="close_menu()"></div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="{% static "JS/Contact.js" %}"></script>
 </body>
 </html>

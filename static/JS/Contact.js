@@ -4,7 +4,6 @@ const language = navigator.language;
 
 const menu = $("#menu");
 const menu_close_area = $("#menu_close_area");
-const title = $('#title');
 const contact = $('#contact');
 const name = $('#name');
 const submit = $('#submit');
@@ -21,6 +20,8 @@ function del_text(obj) {
         del_list[obj] = true;
     }
 }
+
+
 function open_menu() {
     menu.css("display", "inline");
     menu.animate({left: 0}, 300, "linear");
@@ -28,6 +29,8 @@ function open_menu() {
         menu_close_area.css("display", "inline");
     },300);
 }
+
+
 function close_menu() {
     menu_close_area.css("display", "none");
     menu.animate({left: "-6cm"}, 300, "linear");
@@ -35,6 +38,8 @@ function close_menu() {
         menu.css("display", "none");
     },300);
 }
+
+
 function write_text(obj) {
     const object = $('#' + obj);
     if(object.val() === '') {
@@ -61,9 +66,9 @@ function write_text(obj) {
         }
     }
 }
+
+
 if(language === 'ru') {
-    title.text('ЧАТ');
-    $("*").css("font-family", "RuFont");
     main_page_text.css("font-family", "EngFont");
     main_page.attr("title", "Главная страница");
     name.val("Имя");
@@ -71,3 +76,5 @@ if(language === 'ru') {
     submit.val("ОТПРАВИТЬ");
     submit.css("font-family", "RuFont");
 }
+
+event = true;
