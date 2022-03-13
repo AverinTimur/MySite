@@ -43,7 +43,7 @@ else {
         title.text('Ch');
     }, 800);
     setTimeout(function (){
-        title.text('Chat');
+        title.text('Cha');
     }, 1200);
     setTimeout(function (){
         title.text('Chat');
