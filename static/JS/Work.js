@@ -11,6 +11,7 @@ const ru = $("#Ru");
 const chat_text = $("#chat p");
 const chat = $("#chat");
 const main_page = $("#main_page_link");
+const the_top = $("#top");
 
 // functions
 
@@ -70,13 +71,13 @@ setTimeout(function () {
     $("h1").animate({
         top: "0",
     }, 500, "linear");
-    $("#top").animate({
+    the_top.animate({
         height: "13vw",
         zIndex: "1",
     }, 500, "linear");
     setTimeout(function () {
         $("#menu_open_button").css("display", "inline-block");
         $(".main").css("margin-top", "8vw");
-        $("#top").css("position", "relative");
+        the_top.css("position", "relative");
     }, 550);
 }, 1000);

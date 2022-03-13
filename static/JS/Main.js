@@ -2,6 +2,8 @@
 
 let language = navigator.language
 
+const the_top = $("#top");
+const main = $("#main")
 const skills_text = $("#skills_text");
 const work_text = $("#works_text");
 const left_work = $("#left_work");
@@ -13,7 +15,7 @@ const menu_open_text = $("#menu_open_text");
 const chat_text = $("#chat p");
 const chat = $("#chat");
 const language_object = $("#language_change_button");
-changing = false;
+let changing = false;
 
 // functions
 
@@ -122,6 +124,7 @@ if(language === "ru") {
 
 let work_list = Array();
 let works = Array();
+
 $.ajax({
     method : "Post",
     url: $(document).attr("URL") + "StartAJAX/",
@@ -142,8 +145,26 @@ $.ajax({
         main_work.css("background-image", "url('" + work_list[works[main_work_num]] + "')");
         main_work.attr("href", work_list[works[main_work_num]]);
         right_work.css("background-image", "url('" + work_list[works[right_work_num]] + "')");
+
         setInterval(function() {
             work_to_right();
         },10000);
+
+        setTimeout(function () {
+            the_top.animate({
+                height: "14vw",
+                padding: "2vw 0",
+            }, 500, "linear");
+            setTimeout(function () {
+                main.css("top", "0");
+                the_top.css("height", "14vw")
+                the_top.css("box-sizing", "border-box");
+                the_top.css("position", "relative");
+                the_top.css("z-index", "1")
+                if(window.innerWidth <= 480){
+                    $("#phone_menu_open_button").css("display", "inline-block")
+                }
+            }, 500);
+        }, 1000);
     },
 });
