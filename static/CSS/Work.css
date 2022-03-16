@@ -99,7 +99,7 @@ h1 {
 /* Menu open button */
 
 #menu_open_button {
-    position: absolute;
+    position: fixed;
     height: 30%;
     width: 7mm;
     display: none;
