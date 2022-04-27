@@ -258,9 +258,9 @@ html {
 
 #skills_text {
     position: relative;
-    height: 11vh;
+    height: 11vw;
     margin-top: 1vh;
-    font-size: 10vh;
+    font-size: 10vw;
     text-align: center;
     line-height: 80%;
     font-weight: 400;
@@ -332,10 +332,10 @@ html {
 
 #works_text {
     position: relative;
-    height: 11vh;
+    height: 11vw;
     text-align: center;
     line-height: 80%;
-    font-size: 10vh;
+    font-size: 10vw;
     font-weight: 400;
 }
 #works {
@@ -346,9 +346,10 @@ html {
 #works_right_button {
     position: absolute;
     height: 100%;
-    width: 5.8%;
+    width: 10vw;
     display: inline-block;
     z-index: 3;
+    color: gray;
 }
 #works_left_button {
     left: 0;
@@ -362,7 +363,7 @@ html {
     top: calc(50% - 3vw);
     text-align: center;
     line-height: 0;
-    font-size: 12vw;
+    font-size: 20vw;
     opacity: 0.1;
     cursor: pointer;
     -webkit-user-select: none;
@@ -520,7 +521,13 @@ footer {
 
     /* Skills */
 
-    .skill, .active_skill {
+    #skills_text,
+    #works_text{
+        height: 20vw;
+        font-size: 20vw;
+    }
+    .skill,
+    .active_skill {
         width: 95%;
         height: 10vh;
         margin-left: 2.5%;
