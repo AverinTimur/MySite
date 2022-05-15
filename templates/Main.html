@@ -33,7 +33,7 @@
     <p id="imur">imur</p>
   </div>
   <div id="main">
-    <h1 id="skills_text">Skills</h1>
+    <h2 id="skills_text">Skills</h2>
     <div id="skills">
       {% for _ , name in skills_list.items %}
       <div id="skill-{{ name }}" class="skill" onmouseover="skill_on_hover('skill-{{ name }}')" onmouseout="skill_out_hover('skill-{{ name }}')">
@@ -42,7 +42,7 @@
       </div>
       {% endfor %}
     </div>
-    <h1 id="works_text">Works</h1>
+    <h2 id="works_text">Works</h2>
     <div id="works">
       <div id="works_left_button">
         <div class="works_change_text" onclick="work_to_left()"><</div>
@@ -67,9 +67,9 @@
       <a class="footer" href="https://github.com/AverinTimur/MySite.git">GitHub</a>
     </div>
   </footer>
-  <div id="menu_open_button" onmouseover="open_menu()">
+  <button id="menu_open_button" onmouseover="open_menu()">
     <p id="menu_open_text">menu</p>
-  </div>
+  </button>
   <div id="menu">
     <img id="menu_close_button" src="/media/img/x.svg" alt='close menu' onclick="close_menu()">
     <a id="telegram" class="menu_button" href="https://t.me/AverinTimur" title="Telegram"></a>

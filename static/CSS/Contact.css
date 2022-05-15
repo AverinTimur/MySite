@@ -51,7 +51,7 @@ html {
     color: white;
     z-index: 5;
 }
-#title {
+h1 {
     position: absolute;
     width: 100%;
     top: 40%;
@@ -60,9 +60,9 @@ html {
 }
 #menu_open_button {
     position: absolute;
-    height: 10vw;
-    width: 10vw;
-    top: calc(50% - 5vw);
+    height: 7vw;
+    width: 7vw;
+    top: calc(50% - 3.5vw);
     display: none;
     cursor: pointer;
     z-index: 2;

@@ -19,7 +19,7 @@ function start_event(){
     }, 100);
 }
 
-const title = $('#title');
+const title = $('h1');
 let event = false;
 
 if(navigator.language === 'ru') {
