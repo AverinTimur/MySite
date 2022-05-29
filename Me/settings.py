@@ -61,11 +61,11 @@ WSGI_APPLICATION = 'Me.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': env.str('DBEngine'),
-        'NAME': env.str('DBPath'),
-        'USER': env('DBUser'),
-        'PASSWORD': env('DBPassword'),
-        'HOST': env('DBHost'),
+        'ENGINE': env.str('DBENGINE'),
+        'NAME': env.str('DBPATH'),
+        'USER': env('DBUSER'),
+        'PASSWORD': env('DBPASSWORD'),
+        'HOST': env('DBHOST'),
         'PORT': '5432',
     }
 }

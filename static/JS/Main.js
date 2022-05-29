@@ -20,26 +20,43 @@ let changing = false;
 // functions
 
 function Russian() {
-    language_object.css("background-image", "url('media/img/UKFlag.png')");
-    work_text.text("работы");
-    skills_text.text("навыки");
-    chat_text.text("ЧАТ");
-    work_text.css("font-family", "RuFont");
-    skills_text.css("font-family", "RuFont");
-    chat_text.css("font-family", "SecondRuFont");
-    language_object.attr("title", "Сменить язык");
-    chat.attr("title", "Чат");
+    work_text.animate({opacity: 0}, 200, "linear");
+    skills_text.animate({opacity: 0}, 200, "linear");
+    chat_text.animate({opacity: 0}, 200, "linear");
+    setTimeout(function (){
+        language_object.css("background-image", "url('media/img/UKFlag.png')");
+        work_text.text("работы");
+        skills_text.text("навыки");
+        chat_text.text("ЧАТ");
+        work_text.css("font-family", "RuFont");
+        skills_text.css("font-family", "RuFont");
+        chat_text.css("font-family", "SecondRuFont");
+        language_object.attr("title", "Сменить язык");
+        chat.attr("title", "Чат");
+        work_text.animate({opacity: 1}, 200, "linear");
+        skills_text.animate({opacity: 1}, 200, "linear");
+        chat_text.animate({opacity: 1}, 200, "linear");
+    }, 200);
 }
 function English() {
-    language_object.css("background-image", "url('media/img/RussianFlag.png");
-    work_text.text("Works");
-    skills_text.text("Skills");
-    chat_text.text("Chat");
-    work_text.css("font-family", "EngFont");
-    skills_text.css("font-family", "EngFont");
-    chat_text.css("font-family", "EngFont");
-    language_object.attr("title", "Change language");
-    chat.attr("title", "Chat");
+    work_text.animate({opacity: 0}, 200, "linear");
+    skills_text.animate({opacity: 0}, 200, "linear");
+    chat_text.animate({opacity: 0}, 200, "linear");
+
+    setTimeout(function (){
+        language_object.css("background-image", "url('media/img/RussianFlag.png");
+        work_text.text("Works");
+        skills_text.text("Skills");
+        chat_text.text("Chat");
+        work_text.css("font-family", "EngFont");
+        skills_text.css("font-family", "EngFont");
+        chat_text.css("font-family", "EngFont");
+        language_object.attr("title", "Change language");
+        chat.attr("title", "Chat");
+        work_text.animate({opacity: 1}, 200, "linear");
+        skills_text.animate({opacity: 1}, 200, "linear");
+        chat_text.animate({opacity: 1}, 200, "linear");
+    }, 200);
 }
 function change_language() {
     if (language === 'ru') {

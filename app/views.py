@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
 from json import dumps
-from smtplib import SMTP_SSL
+from smtplib import SMTP
 from environs import Env
 from email.mime.text import MIMEText
 
@@ -40,9 +40,11 @@ def contact(request):
         contact = request.POST.get('contact')
         text = request.POST.get('text')
         massage = MIMEText(f'<p>Name: {name}</p><p>Contact: {contact}</p><p>{text}</p>', 'html')
-        server = SMTP_SSL('smtp.gmail.com', 465)
-        server.login(env.str('Email'), env.str('EmailPassword'))
-        server.sendmail(env.str('Email'), env.str('Email'), massage.as_string())
+        server = SMTP('smtp.gmail.com', 587)
+        server.ehlo()
+        server.starttls()
+        server.login(env.str('EMAIL'), env.str('EMAILPASSWORD'))
+        server.sendmail(env.str('EMAIL'), env.str('EMAIL'), massage.as_string())
         server.quit()
 
     return HttpResponse(render(request, "Contact.html"))

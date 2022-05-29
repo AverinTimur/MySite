@@ -258,9 +258,9 @@ html {
 
 #skills_text {
     position: relative;
-    height: 11vw;
+    height: 9vw;
     margin-top: 1vh;
-    font-size: 10vw;
+    font-size: 8vw;
     text-align: center;
     line-height: 80%;
     font-weight: 400;
@@ -332,10 +332,10 @@ html {
 
 #works_text {
     position: relative;
-    height: 11vw;
+    height: 9vw;
     text-align: center;
     line-height: 80%;
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: 400;
 }
 #works {
