@@ -2,6 +2,7 @@
 
 let language = navigator.language;
 
+const main = $(".main")
 const menu = $("#menu");
 const menu_close_area = $("#menu_close_area");
 const menu_open_text = $("#menu_open_text");
@@ -54,13 +55,19 @@ function English() {
     main_page.attr("title", "Main Page");
 }
 function change_language() {
-    if (language !== "ru") {
-        Russian();
-        language = "ru";
-    }else {
-        English();
-        language = "en";
-    }
+    chat_text.animate({opacity: 0}, 200, "linear");
+    main.animate({opacity: 0}, 200, "linear");
+    setTimeout(function (){
+        if (language !== "ru") {
+            Russian();
+            language = "ru";
+        }else {
+            English();
+            language = "en";
+        }
+        chat_text.animate({opacity: 1}, 200, "linear");
+        main.animate({opacity: 1}, 200, "linear");
+    }, 200);
 }
 
 // start
@@ -77,7 +84,7 @@ setTimeout(function () {
     }, 500, "linear");
     setTimeout(function () {
         $("#menu_open_button").css("display", "inline-block");
-        $(".main").css("margin-top", "8vw");
+        main.css("margin-top", "8vw");
         the_top.css("position", "relative");
     }, 550);
 }, 1000);

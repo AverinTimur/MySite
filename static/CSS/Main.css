@@ -223,15 +223,15 @@ html {
 }
 #T_line1 {
     position: absolute;
-    shape-outside: polygon(0 0,100% 0,50% 10%);
-    -webkit-clip-path: polygon(0 0,100% 0,50% 10%);
-            clip-path: polygon(0 0,100% 0,50% 10%);
+    shape-outside: polygon(10% 0,90% 0,50% 20%);
+    -webkit-clip-path: polygon(10% 0,90% 0,50% 20%);
+            clip-path: polygon(10% 0,90% 0,50% 20%);
 }
 #T_line2 {
     position: absolute;
-    shape-outside: polygon(40% 10%,50% 15%,60% 10%,50% 100%);
-    -webkit-clip-path: polygon(40% 10%,50% 15%,60% 10%,50% 100%);
-        clip-path: polygon(40% 10%,50% 15%,60% 10%,50% 100%);
+    shape-outside: polygon(40% 20%,50% 35%,60% 20%,50% 100%);
+    -webkit-clip-path: polygon(40% 20%,50% 35%,60% 20%,50% 100%);
+        clip-path: polygon(40% 20%,50% 35%,60% 20%,50% 100%);
 }
 #imur {
     position: relative;
