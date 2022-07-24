@@ -4,11 +4,7 @@
 
 @font-face {
     src: url(/static/font/MomcakeBold-WyonA.otf);
-    font-family: EngFont;
-}
-@font-face {
-    src: url(/static/font/20953.ttf);
-    font-family: RuFont;
+    font-family: Font;
 }
 
 /* Main features */
@@ -40,6 +36,9 @@ html {
     z-index: 10;
     cursor: pointer;
 }
+ip{
+    display: none;
+}
 
 /* Scrollbar */
 
@@ -55,40 +54,79 @@ html {
 
 #top {
     position: absolute;
-    height: 100%;
+    height: 15vh;
     width: 100%;
     background: black;
     color: white;
     z-index: 5;
+    font-family: Font;
+}
+h1, h2 {
+    position: fixed;
+    width: 100vw;
+    height: 15vh;
+    top: 0;
+    text-align: center;
+    font-size: 15vh;
+    font-family: Font;
 }
 h1 {
-    position: absolute;
-    width: 100%;
-    top: 40%;
-    text-align: center;
-    font-size: 20vh;
+    top: 0;
+}
+h2 {
+    top: 15vh;
+    z-index: 4;
 }
 #menu_open_button {
     position: absolute;
     height: 7vw;
     width: 7vw;
+    display: inline-block;
     top: calc(50% - 3.5vw);
-    display: none;
     cursor: pointer;
-    z-index: 2;
+    z-index: 7;
 }
 
-/* Form */
+/* Chats list */
 
-#messages{
+#chat {
+   display: inline-block;
+}
+#chats {
+    position: relative;
+    height: 85vh;
+    width: 100vw;
+    top: 15vh;
+    background-color: white;
+    z-index: 7;
+}
+.chat_button {
+    height: 10vh;
+    display: inline-block;
+    border: 3px solid black;
+    margin: 1vh;
+    padding: 1vh;
+    cursor: pointer;
+}
+.chat_button > * {
+    position: relative;
+    top: 1vh;
+    font-size: 8vh;
+    cursor: pointer;
+}
+
+/* Chat */
+
+#messages {
     position: fixed;
     height: 75vh;
     width: 99.8vw;
-    left: 0;
+    top: 15vh;
     overflow-y: auto;
-    overflow-x: hidden;
+    z-index: 5;
+    background-color: white;
 }
-.message, .message_admin {
+.message, .message_admin{
     position: relative;
     width: 75vw;
     border: 3px solid black;
@@ -103,25 +141,6 @@ h1 {
 .message_admin {
     left: 22vw;
 }
-#main {
-    position: absolute;
-    height: 85vh;
-    width: 100%;
-    top: 15vh;
-    display: inline-block;
-}
-input{
-    font-size: 3vw;
-}
-#name {
-    position: fixed;
-    height: 5vh;
-    width: 20vw;
-    top: 8vh;
-    right: 1vw;
-    background-color: white;
-    z-index: 1;
-}
 #text{
     position: fixed;
     width: 80vw;
@@ -129,6 +148,7 @@ input{
     bottom: 0;
     border-top: 3px solid black;
     font-size: 5vh;
+    z-index: 6;
 }
 #submit {
     position: fixed;
@@ -142,6 +162,7 @@ input{
     background: black;
     color: white;
     cursor: pointer;
+    z-index: 6;
 }
 
 /* Menu */
@@ -154,7 +175,7 @@ input{
     border-bottom-right-radius: 10mm;
     border-top-right-radius: 10mm;
     display: none;
-    z-index: 6;
+    z-index: 8;
     background-color: white;
     opacity: 0.95;
 }
@@ -181,89 +202,28 @@ input{
     background-color: black;
     cursor: pointer;
 }
-#telegram {
-    mask-image: url(/media/img/telegram.svg);
-        -webkit-mask-image: url(/media/img/telegram.svg);
-    mask-repeat: no-repeat;
-        -webkit-mask-repeat: no-repeat;
-    mask-size: 100%;
-        -webkit-mask-size: 100%;
-}
-#git_button {
-    mask-image: url(/media/img/git.svg);
-        -webkit-mask-image: url(/media/img/git.svg);
-    mask-repeat: no-repeat;
-        -webkit-mask-repeat: no-repeat;
-    mask-size: 100%;
-        -webkit-mask-size: 100%;
-}
-#main_page_link p {
+.menu_button p {
     position: absolute;
     width: 100%;
-    bottom: 25%;
-    font-size: 2cm;
+    bottom: 1.4cm;
+    font-size: 1.2cm;
     color: white;
     text-align: center;
     vertical-align: middle;
 }
 
 @media (max-device-width: 480px) {
-    /* Top */
-
-    h1{
-        font-size: 30vw;
-    }
-    #menu_open_button {
-        height: 20vw;
-        width: 20vw;
-        top: calc(50% - 10vw);
-    }
-
-    /* Scrollbar */
-
     ::-webkit-scrollbar{
         width: 0;
     }
-
-    /* Menu */
-
-    #menu {
-        width: 40%;
+    h1{
+        top: calc(7.5vh - 12.5vw);
+        font-size: 25vw;
     }
-
-    .menu_button {
-        height: 26.66vw;
-        width: 26.66vw;
-        margin: 6.67vw;
-    }
-    #main_page_link p {
-        font-size: 14vw;
-    }
-    #main{
-        position: relative;
-        height: 5vh;
-        width: 100vw;
-        right: 1vw;
-        padding-left: 2vw;
-        background-color: white;
-        z-index: 1;
-        top: 10vh;
-    }
-
-    /* Chat */
-
-    #messages{
-        height: 80vh;
-    }
-    .message_admin {
-        left: 20vw;
-    }
-    #name{
-        height: 3vh;
-        top: 3.5vh;
-        font-size: 2vh;
-    }
-    #text{
-        left: 0;
+    #menu_open_button{
+        height: 15vw;
+        width: 15vw;
+        top: calc(50% - 7.5vw);
+        left: 1vw;
     }
 }

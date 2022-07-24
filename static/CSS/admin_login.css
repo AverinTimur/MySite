@@ -1,0 +1,17 @@
+form {
+    position: fixed;
+    height: 350px;
+    width: 600px;
+    top: 10vh;
+    left: calc(50vw - 300px);
+    border: 3px solid black;
+}
+input {
+    width: 500px;
+    margin: 40px 50px;
+    height: 35px;
+    font-size: 30px
+}
+#submit{
+    background-color: white;
+}

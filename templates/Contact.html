@@ -15,6 +15,7 @@
   <link rel="icon" type="image/png" href="../media/img/Logo.png">
   <link rel="stylesheet" type="text/css" href="{% static 'CSS/Contact.css' %}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta id="cookie" cookie="{{ cookie }}">
 </head>
 <body>
   <div id="top">
@@ -25,10 +26,18 @@
   </div>
   <script src="{% static "JS/ChatStart.js" %}"></script>
   <form id="main" method="post">{% csrf_token %}
-    <input id="name" name="name" type="text" value="Name" required onfocus="del_text(this.id)" onblur="write_text(this.id)">
-    <input id="contact" name="contact" type="text" value="Contact(email, telegram, website)" onfocus="del_text(this.id)" onblur="write_text(this.id)">
+    <input id="name" name="name" type="text" value="Name" required onfocus="del_text()" onblur="write_text()">
+    <div id="messages">
+      {% for message in messages %}
+        {% if message.admin %}
+            <p class="message_admin">{{ message.text }}</p>
+        {% else %}
+            <p class="message">{{ message.text }}</p>
+        {% endif %}
+      {% endfor %}
+    </div>
     <textarea id="text" name="text" required></textarea>
-    <input type="submit" id="submit" value="submit" required>
+    <input id="submit" type="button" value="submit" onclick="web_socket()" required>
   </form>
   <div id="menu">
     <img id="menu_close_button" src="/media/img/x.svg" alt='close menu' onclick="close_menu()">

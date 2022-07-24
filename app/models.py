@@ -24,7 +24,16 @@ class Skills(models.Model):
 
 class Works(models.Model):
     name = models.TextField(blank=False)
-    img = models.ImageField(blank=False,upload_to="app/img",null=True,)
+    img = models.ImageField(blank=False, upload_to="app/img", null=True)
 
     class Meta:
         verbose_name = 'Проект'
+
+
+class Users(models.Model):
+    cookie = models.TextField(blank=False, null=True)
+    name = models.TextField(blank=False, null=True)
+    chat = models.JSONField(blank=False, null=True)
+
+    class Meta:
+        verbose_name = 'Пользователи'

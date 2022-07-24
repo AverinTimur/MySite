@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Averin Timur</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Averin Timur">
+  <meta name="description" content="It's my site. It works with Django(Python framework), HTML/CSS, JavaScript/jQuery.">
+  <meta name="keywords" content="Django(Python framework), HTML/CSS, JavaScript/jQuery">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-language" content="ru-RU">
+  <meta http-equiv="content-type" content="text/html">
+  <meta http-equiv="content-security-policy" content="default-src * 'unsafe-inline'">
+  <link rel="icon" type="image/png" href="../media/img/Logo.png">
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/admin_chat.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta id="cookie" cookie="">
+  {% csrf_token %}
+</head>
+<body>
+  <div id="top">
+    <svg id="menu_open_button" class="bi bi-list" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" onclick="open_menu()">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+    </svg>
+    <h1>Admin</h1>
+    <h2></h2>
+  </div>
+  <div id="chats">
+    <ul>
+      {% for user in users %}
+        <li class="chat_button"><button value="{{ user.cookie }}" onclick="open_chat(this)">{{ user.name }}</button></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="chat">
+    <div id="messages"></div>
+    <textarea id="text" name="text" required></textarea>
+    <input id="submit" type="button" value="ОТПРАВИТЬ" onclick="web_socket()" required>
+  </div>
+    <div id="menu">
+      <img id="menu_close_button" src="/media/img/x.svg" alt='close menu' onclick="close_menu()">
+      <a id="main_page_link" class="menu_button" href="/" title="Main Page"><p>MAIN</p></a>
+      <button class="menu_button" title="Chats" onclick="open_chats_menu()"><p>CHATS</p></button>
+    </div>
+    <div id="menu_close_area" class="all_size" onmouseover="close_menu()"></div>
+    <script src="{% static "JS/admin_chat.js" %}"></script>
+</body>
+</html>

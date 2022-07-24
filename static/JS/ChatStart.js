@@ -2,14 +2,26 @@ function start_event(){
     const interval = setInterval(function (){
         if(event) {
             setTimeout(function () {
-                title.animate({
-                    top: "0",
-                    "font-size": "15vh",
-                }, 500, "linear");
-                $("#top").animate({
-                    height: "15vh",
-                    zIndex: "1",
-                }, 500, "linear");
+                if($(window).width() > 480){
+                    title.animate({
+                        top: "0",
+                        "font-size": "15vh",
+                    }, 500, "linear");
+                    $("#top").animate({
+                        height: "15vh",
+                        zIndex: "1",
+                    }, 500, "linear");
+                }
+                else{
+                    title.animate({
+                        top: $(document).height() * 0.05 - $(document).width() * 0.115,
+                        "font-size": "23vw",
+                    }, 500, "linear");
+                    $("#top").animate({
+                        height: "10vh",
+                        zIndex: "1",
+                    }, 500, "linear");
+                }
                 setTimeout(function () {
                     $("#menu_open_button").css("display", "inline-block");
                 }, 550);

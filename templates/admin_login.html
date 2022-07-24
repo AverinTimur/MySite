@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Averin Timur</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Averin Timur">
+  <meta name="description" content="It's my site. It works with Django(Python framework), HTML/CSS, JavaScript/jQuery.">
+  <meta name="keywords" content="Django(Python framework), HTML/CSS, JavaScript/jQuery">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-language" content="ru-RU">
+  <meta http-equiv="content-type" content="text/html">
+  <meta http-equiv="content-security-policy" content="default-src * 'unsafe-inline'">
+  <link rel="icon" type="image/png" href="../media/img/Logo.png">
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/admin_login.css' %}">
+</head>
+<body>
+    <form method="post">
+        <input id="login" type="text" name="login">
+        <input id="password" type="text" name="password">
+        <input id="submit" type="submit" value="ВОЙТИ">
+    </form>
+</body>
+</html>
