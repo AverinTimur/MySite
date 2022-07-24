@@ -1,8 +1,34 @@
 # MySite
-Это пример моей работы с :
+Это пример моей работы с:
 + Django(Python)
 + HTML/CSS/JavaScript
 + jQuery(JavaScript)
+
+## Использование
++ Скачать репозиторий
++ Создать базу данных postsql
++ Заполнить файл .env
++ Создать миграции и заполнить базу данных. В корневой дериктории проекта:
+```
+python manage.py makemigrations
+python manage.py migrate
+```
++ Создать аккаунт админа и заполнить поля(пороль не показываются)
+```
+python manage.py createsuperuser
+```
++ Запустить docker:
+```
+docker run -p 6379:6379 -d redis:5
+```
+или redis:
+```
+redis server
+```
++ Запустить django
+```
+python manage.py runserver
+```
 
 ## Страницы
 + Главная. Содержет в себе мои умения и премеры работ
